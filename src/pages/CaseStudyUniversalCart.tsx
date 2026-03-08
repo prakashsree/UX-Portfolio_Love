@@ -118,31 +118,37 @@ const UniversalCartCaseStudy = () => {
             </ul>
 
             {/* User Persona */}
-            <div className="mt-8 rounded-xl border border-border bg-card p-6">
-              <h3 className="mb-4 font-display text-lg font-bold text-foreground">User Persona</h3>
-              <div className="flex flex-col gap-6 sm:flex-row">
-                <div className="flex-shrink-0">
-                  <div className="relative h-48 w-40 overflow-hidden rounded-lg bg-muted">
+            <div className="mt-8 rounded-xl border border-border bg-card p-6 md:p-8">
+              <h3 className="mb-6 font-display text-lg font-bold text-foreground">User Persona</h3>
+              <div className="grid gap-6 md:grid-cols-[200px_1fr]">
+                <div className="flex flex-col items-center text-center">
+                  <div className="relative h-52 w-44 overflow-hidden rounded-lg bg-muted">
                     <img src={personaImg} alt="User persona - Sam" className="h-full w-full object-cover" />
                   </div>
-                  <p className="mt-2 text-center text-xs italic text-primary">"I appreciate shopping experiences that are quick, convenient and simple."</p>
+                  <p className="mt-3 max-w-[200px] text-xs italic text-primary">"I appreciate shopping experiences that are quick, convenient and simple."</p>
                 </div>
-                <div className="flex-1">
-                  <p className="mb-3 font-display text-base font-semibold text-foreground">Age: 38 | Occupation: Finance | Status: Married</p>
-                  <h4 className="mb-1 font-display text-sm font-bold text-foreground">Background</h4>
-                  <p className="mb-4 text-sm">I'm a very busy working mom. When I'm not at work, I'm dropping kids off or picking kids up from school or various activities. I'm lucky if I get a few minutes to myself to relax. A few of us need new phones and I hope that it's quick and easy.</p>
-                  <div className="grid gap-4 sm:grid-cols-2">
-                    <div>
+                <div className="space-y-5">
+                  <div className="flex flex-wrap gap-3">
+                    <span className="rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">Age: 38</span>
+                    <span className="rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">Occupation: Finance</span>
+                    <span className="rounded-full bg-primary/10 px-4 py-1.5 text-sm font-medium text-primary">Status: Married</span>
+                  </div>
+                  <div>
+                    <h4 className="mb-1.5 font-display text-sm font-bold text-foreground">Background</h4>
+                    <p className="text-sm leading-relaxed text-muted-foreground">I'm a very busy working mom. When I'm not at work, I'm dropping kids off or picking kids up from school or various activities. I'm lucky if I get a few minutes to myself to relax. A few of us need new phones and I hope that it's quick and easy.</p>
+                  </div>
+                  <div className="grid gap-5 lg:grid-cols-2">
+                    <div className="rounded-lg bg-muted/50 p-4">
                       <h4 className="mb-2 font-display text-sm font-bold text-foreground">Behaviors</h4>
-                      <ul className="list-disc space-y-1 pl-4 text-sm">
+                      <ul className="list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-muted-foreground">
                         <li>I use my phone a lot between work, keeping in touch with the kids and personal use</li>
                         <li>Time is precious, so efficiency is key</li>
                         <li>I do try to get a good deal on things when I can, so I'm not afraid to do a little research before making a big purchase</li>
                       </ul>
                     </div>
-                    <div>
-                      <h4 className="mb-2 font-display text-sm font-bold text-foreground">Key Frustrations</h4>
-                      <ul className="list-disc space-y-1 pl-4 text-sm">
+                    <div className="rounded-lg bg-destructive/5 p-4">
+                      <h4 className="mb-2 font-display text-sm font-bold text-destructive">Key Frustrations</h4>
+                      <ul className="list-disc space-y-1.5 pl-4 text-sm leading-relaxed text-muted-foreground">
                         <li>My life is very busy and hectic. I'm constantly being pulled in multiple directions. I have a tendency to have to stop what I'm doing because something has come up with the kids or work.</li>
                         <li>When I've upgraded in the past, it always seemed to be a much more complicated process than I thought it would be</li>
                         <li>When I do get around to buying phones, I hope it is quick because I can't afford to spend too much time on it with everything else going on with the family</li>
