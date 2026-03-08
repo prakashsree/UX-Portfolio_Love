@@ -179,7 +179,7 @@ const DeviceSetupCaseStudy = () => {
 
           {/* Heuristic Evaluation */}
           <Section title="Heuristic Evaluation">
-            <img src={dsHeuristicEval} alt="Heuristic Evaluation - Smart Setup page with User Control & Freedom findings" className="mb-4 max-w-lg rounded-lg border border-border" />
+            <img src={dsHeuristicEval} alt="Heuristic Evaluation - Smart Setup page with User Control & Freedom findings" className="mb-2 max-w-lg rounded-lg border border-border" />
             <h3 className="mb-3 font-display text-lg font-bold text-foreground">Key Findings (Severity Rated)</h3>
             <div className="space-y-4">
               {[
@@ -425,8 +425,8 @@ const Section = ({ title, children }: { title: string; children: React.ReactNode
     viewport={{ once: true }}
     className="mb-12"
   >
-    <h2 className="mb-4 font-display text-2xl font-bold text-foreground">{title}</h2>
-    <div className="space-y-3 font-body text-base leading-relaxed text-muted-foreground">{children}</div>
+    <h2 className="mb-2 font-display text-2xl font-bold text-foreground">{title}</h2>
+    <div className="space-y-2 font-body text-base leading-relaxed text-muted-foreground">{children}</div>
   </motion.div>
 );
 
