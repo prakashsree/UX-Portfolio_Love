@@ -31,7 +31,7 @@ const AboutSection = () => {
               Nice to meet you.
             </h2>
             <div className="space-y-4 font-body text-base leading-relaxed text-muted-foreground">
-              <p>I'm Prakash S — a Lead UX Designer with 12+ years of experience building products that make a real difference. I've had the privilege of working across Communications, Media, Technology, Retail, and Hospitality, partnering with everyone from C-suite stakeholders to frontline users.
+              <p>I'm Prakash S — a Lead UX Designer/Analyst with 12+ years of experience building products that make a real difference. I've had the privilege of working across Communications, Media, Technology, Retail, and Hospitality, partnering with everyone from C-suite stakeholders to frontline users.
 
               </p>
               <p>
