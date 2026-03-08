@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import cartImg from "@/assets/case-universal-cart.jpg";
 import deviceImg from "@/assets/case-device-setup.jpg";
 import bcspImg from "@/assets/case-bcsp-services.jpg";
+import pocImg from "@/assets/case-poc-rfp.jpg";
 
 const projects = [
   {
