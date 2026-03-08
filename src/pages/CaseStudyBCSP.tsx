@@ -54,12 +54,8 @@ const CaseStudyBCSP = () => {
       <Navbar />
       <main className="pt-16">
         {/* Hero */}
-        <section className="relative overflow-hidden bg-card py-16">
-          <div className="absolute inset-0">
-            <img src={bcspHero} alt="BCSP Services" className="h-full w-full object-cover opacity-20" />
-            <div className="absolute inset-0 bg-gradient-to-b from-card/60 to-card" />
-          </div>
-          <div className="container relative mx-auto px-6">
+        <section className="bg-card py-16">
+          <div className="container mx-auto px-6">
             <Link
               to="/"
               className="mb-8 inline-flex items-center gap-2 font-body text-sm text-muted-foreground transition-colors hover:text-primary"
@@ -73,26 +69,21 @@ const CaseStudyBCSP = () => {
               <h1 className="mb-4 font-display text-3xl font-bold text-foreground sm:text-5xl">
                 BCSP Services
               </h1>
-              <p className="max-w-2xl font-body text-lg leading-relaxed text-muted-foreground">
+              <p className="mb-8 max-w-2xl font-body text-lg text-muted-foreground">
                 Discover the service offerings within BCSP and provide feedback to improve their user experience.
               </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <span className="rounded-md bg-secondary px-3 py-1 font-body text-xs text-secondary-foreground">
-                  UX Research
-                </span>
-                <span className="rounded-md bg-secondary px-3 py-1 font-body text-xs text-secondary-foreground">
-                  Heuristic Evaluation
-                </span>
-                <span className="rounded-md bg-secondary px-3 py-1 font-body text-xs text-secondary-foreground">
-                  Survey Design
-                </span>
-                <span className="rounded-md bg-secondary px-3 py-1 font-body text-xs text-secondary-foreground">
-                  Chatbots
-                </span>
+              <div className="flex flex-wrap gap-6 font-body text-sm text-muted-foreground">
+                <div><span className="font-semibold text-foreground">Role:</span> UX Designer</div>
+                <div><span className="font-semibold text-foreground">Methods:</span> Research, Heuristic Evaluation, Survey Design, Chatbots</div>
               </div>
             </motion.div>
           </div>
         </section>
+
+        {/* Cover image */}
+        <div className="container mx-auto px-6 py-12">
+          <img src={bcspHero} alt="BCSP Services case study" className="w-full rounded-xl object-cover shadow-card" />
+        </div>
 
         {/* Content */}
         <section className="bg-background py-16">
