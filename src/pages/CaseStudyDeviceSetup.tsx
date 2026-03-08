@@ -3,7 +3,7 @@ import { ArrowLeft, Phone, Target, Users, Search, Lightbulb, Headphones, CheckCi
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import deviceImg from "@/assets/case-device-setup.jpg";
+import deviceImg from "@/assets/ds-wizard-step1.png";
 import dsHeuristicEval from "@/assets/ds-heuristic-eval.png";
 import dsPersonaJonathan from "@/assets/ds-persona-jonathan.jpg";
 
