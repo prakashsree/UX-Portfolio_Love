@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import deviceImg from "@/assets/case-device-setup.jpg";
 import dsHeuristicEval from "@/assets/ds-heuristic-eval.png";
+import dsPersonaJonathan from "@/assets/ds-persona-jonathan.jpg";
 
 const DeviceSetupCaseStudy = () => {
   return (
