@@ -3,8 +3,6 @@ import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import cartImg from "@/assets/case-universal-cart.jpg";
 import deviceImg from "@/assets/case-device-setup.jpg";
-import pocImg from "@/assets/poc-hero.jpg";
-import bcspImg from "@/assets/case-bcsp-hero.jpg";
 
 const projects = [
   {
@@ -24,32 +22,10 @@ const projects = [
     subtitle: "Communications & Technology",
     description:
       "Created a unified, easy-to-follow device setup experience that centralizes all setup assets and increases adoption of tech support offerings.",
-    role: "Sr UX Designer",
-    tags: ["Research", "Design Thinking", "Prototyping", "Usability Testing"],
+    role: "Lead Designer",
+    tags: ["UX Design", "Information Architecture", "User Flows"],
     image: deviceImg,
     link: "/case-study/device-setup",
-  },
-  {
-    id: "poc-rfp",
-    title: "Proof of Concept / RFP",
-    subtitle: "UX Design & Strategy",
-    description:
-      "Designed proof-of-concept prototypes for diverse clients — from restaurant ordering apps to telecom dashboards and vehicle service platforms — demonstrating practical UX potential.",
-    role: "UX Designer",
-    tags: ["Wireframing", "Prototyping", "UX Strategy", "Native Apps"],
-    image: pocImg,
-    link: "/case-study/poc-rfp",
-  },
-  {
-    id: "bcsp-services",
-    title: "BCSP Services",
-    subtitle: "Communications & Technology",
-    description:
-      "Discovered service offerings within BCSP and provided UX feedback through surveys, heuristic evaluations, and user interviews to improve collaboration tools.",
-    role: "UX Designer",
-    tags: ["UX Research", "Heuristic Evaluation", "Survey Design", "Chatbots"],
-    image: bcspImg,
-    link: "/case-study/bcsp-services",
   },
 ];
 
