@@ -10,6 +10,7 @@ import touchpointsImg from "@/assets/ds-touchpoints.png";
 import userflowWorkshopImg from "@/assets/ds-userflow-workshop.png";
 import prototypeDeviceSetupImg from "@/assets/ds-prototype-device-setup.png";
 import solutionDeviceSetupImg from "@/assets/ds-solution-device-setup.png";
+import heatmapTasksImg from "@/assets/ds-heatmap-tasks.png";
 
 const DeviceSetupCaseStudy = () => {
   return (
