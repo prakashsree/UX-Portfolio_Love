@@ -381,7 +381,7 @@ const UniversalCartCaseStudy = () => {
             <h3 className="mb-3 mt-6 font-display text-lg font-bold text-foreground">D. Multi-Quote Comparison</h3>
             <p>We found users often requested multiple quotes in-store but couldn't compare them easily at home. I designed a "Cross-Channel Quote Experience" allowing users to compare up to three quotes side-by-side on their digital dashboard and convert their preferred choice into a cart with a single click.</p>
 
-            <div className="mt-8 grid gap-6 md:grid-cols-2">
+            <div className="mt-8 grid gap-6 md:grid-cols-3">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -399,6 +399,15 @@ const UniversalCartCaseStudy = () => {
                 className="overflow-hidden rounded-xl border border-border shadow-md"
               >
                 <img src={smartConciergeImg} alt="Smart Concierge – review quote details with item breakdown" className="w-full" />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="overflow-hidden rounded-xl border border-border shadow-md"
+              >
+                <img src={successImg} alt="Smart Concierge – success confirmation and secure checkout redirect" className="w-full" />
               </motion.div>
             </div>
           </Section>
