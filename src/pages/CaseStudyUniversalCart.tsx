@@ -109,6 +109,44 @@ const UniversalCartCaseStudy = () => {
               <li>How might we encourage customers to resume their shopping journey exactly where they left off, regardless of the device?</li>
               <li>How can we give Sales Reps immediate visibility into a customer's digital activity to facilitate a seamless hand-off?</li>
             </ul>
+
+            {/* User Persona */}
+            <div className="mt-8 rounded-xl border border-border bg-card p-6">
+              <h3 className="mb-4 font-display text-lg font-bold text-foreground">User Persona</h3>
+              <div className="flex flex-col gap-6 sm:flex-row">
+                <div className="flex-shrink-0">
+                  <div className="relative h-48 w-40 overflow-hidden rounded-lg bg-muted">
+                    <div className="flex h-full w-full items-center justify-center text-muted-foreground">
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
+                    </div>
+                  </div>
+                  <p className="mt-2 text-center text-xs italic text-primary">"I appreciate shopping experiences that are quick, convenient and simple."</p>
+                </div>
+                <div className="flex-1">
+                  <p className="mb-3 font-display text-base font-semibold text-foreground">Age: 38 | Occupation: Finance | Status: Married</p>
+                  <h4 className="mb-1 font-display text-sm font-bold text-foreground">Background</h4>
+                  <p className="mb-4 text-sm">I'm a very busy working mom. When I'm not at work, I'm dropping kids off or picking kids up from school or various activities. I'm lucky if I get a few minutes to myself to relax. A few of us need new phones and I hope that it's quick and easy.</p>
+                  <div className="grid gap-4 sm:grid-cols-2">
+                    <div>
+                      <h4 className="mb-2 font-display text-sm font-bold text-foreground">Behaviors</h4>
+                      <ul className="list-disc space-y-1 pl-4 text-sm">
+                        <li>I use my phone a lot between work, keeping in touch with the kids and personal use</li>
+                        <li>Time is precious, so efficiency is key</li>
+                        <li>I do try to get a good deal on things when I can, so I'm not afraid to do a little research before making a big purchase</li>
+                      </ul>
+                    </div>
+                    <div>
+                      <h4 className="mb-2 font-display text-sm font-bold text-foreground">Key Frustrations</h4>
+                      <ul className="list-disc space-y-1 pl-4 text-sm">
+                        <li>My life is very busy and hectic. I'm constantly being pulled in multiple directions. I have a tendency to have to stop what I'm doing because something has come up with the kids or work.</li>
+                        <li>When I've upgraded in the past, it always seemed to be a much more complicated process than I thought it would be</li>
+                        <li>When I do get around to buying phones, I hope it is quick because I can't afford to spend too much time on it with everything else going on with the family</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </Section>
 
           <Section title="4. The Solution">
