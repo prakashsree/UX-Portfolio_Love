@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import cartImg from "@/assets/case-universal-cart.jpg";
 import deviceImg from "@/assets/case-device-setup.jpg";
 import pocImg from "@/assets/poc-hero.jpg";
+import bcspImg from "@/assets/case-bcsp-hero.jpg";
 
 const projects = [
   {
@@ -38,6 +39,17 @@ const projects = [
     tags: ["Wireframing", "Prototyping", "UX Strategy", "Native Apps"],
     image: pocImg,
     link: "/case-study/poc-rfp",
+  },
+  {
+    id: "bcsp-services",
+    title: "BCSP Services",
+    subtitle: "Communications & Technology",
+    description:
+      "Discovered service offerings within BCSP and provided UX feedback through surveys, heuristic evaluations, and user interviews to improve collaboration tools.",
+    role: "UX Designer",
+    tags: ["UX Research", "Heuristic Evaluation", "Survey Design", "Chatbots"],
+    image: bcspImg,
+    link: "/case-study/bcsp-services",
   },
 ];
 
