@@ -1,8 +1,18 @@
 import { motion } from "framer-motion";
+import logoCisco from "@/assets/logo-cisco.png";
+import logoVerizon from "@/assets/logo-verizon.png";
+import logoHuawei from "@/assets/logo-huawei.png";
+import logoHmshost from "@/assets/logo-hmshost.png";
+import logoMasterbrands from "@/assets/logo-masterbrands.png";
+import logoMhrd from "@/assets/logo-mhrd.png";
 
 const clients = [
-  "Cisco", "Verizon", "Huawei", "HMS Host",
-  "Masterbrands Cabinet", "MHRD, Govt of India",
+  { name: "Cisco", logo: logoCisco },
+  { name: "Verizon", logo: logoVerizon },
+  { name: "Huawei", logo: logoHuawei },
+  { name: "HMS Host", logo: logoHmshost },
+  { name: "Masterbrands Cabinet", logo: logoMasterbrands },
+  { name: "MHRD, Govt of India", logo: logoMhrd },
 ];
 
 const ClientsSection = () => {
@@ -19,16 +29,23 @@ const ClientsSection = () => {
         </motion.p>
         <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14">
           {clients.map((client, i) => (
-            <motion.span
-              key={client}
+            <motion.div
+              key={client.name}
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="font-display text-lg font-semibold text-muted-foreground/60 transition-colors hover:text-primary"
+              className="group flex flex-col items-center gap-2 transition-colors"
             >
-              {client}
-            </motion.span>
+              <img
+                src={client.logo}
+                alt={`${client.name} logo`}
+                className="h-10 w-auto object-contain opacity-60 grayscale transition-all group-hover:opacity-100 group-hover:grayscale-0"
+              />
+              <span className="font-body text-xs text-muted-foreground/50 transition-colors group-hover:text-primary">
+                {client.name}
+              </span>
+            </motion.div>
           ))}
         </div>
       </div>
