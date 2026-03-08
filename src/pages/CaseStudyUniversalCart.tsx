@@ -148,6 +148,65 @@ const UniversalCartCaseStudy = () => {
             </div>
           </Section>
 
+          {/* User Journey */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="mb-4 font-display text-2xl font-bold text-foreground">User Journey: .COM to .COM</h2>
+            <div className="space-y-0">
+              {/* Timeline */}
+              <div className="relative flex flex-col gap-0">
+                {/* Start phase */}
+                <div className="mb-2">
+                  <span className="inline-block rounded-full bg-primary px-3 py-1 font-display text-xs font-bold text-primary-foreground">Start</span>
+                </div>
+                <div className="flex flex-col gap-4 border-l-2 border-primary/30 pl-6">
+                  <div className="relative rounded-lg border border-border bg-card p-4">
+                    <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-primary-foreground">1</span>
+                    <p className="text-sm text-muted-foreground">Sam is an existing customer with an old smartphone.</p>
+                  </div>
+                  <div className="relative rounded-lg border border-border bg-card p-4">
+                    <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-primary-foreground">2</span>
+                    <p className="text-sm text-muted-foreground">Sam wants to upgrade her phone and see how much it would cost her.</p>
+                  </div>
+                  <div className="relative rounded-lg border border-border bg-card p-4">
+                    <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-primary-foreground">3</span>
+                    <p className="text-sm text-muted-foreground">She shops for an iPhone on the website, customizes it according to her needs and adds it to her cart to estimate the price.</p>
+                  </div>
+                </div>
+
+                {/* Pause phase */}
+                <div className="mb-2 mt-6">
+                  <span className="inline-block rounded-full bg-yellow-500 px-3 py-1 font-display text-xs font-bold text-white">Pause</span>
+                </div>
+                <div className="flex flex-col gap-4 border-l-2 border-yellow-500/30 pl-6">
+                  <div className="relative rounded-lg border border-border bg-card p-4">
+                    <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-yellow-500 text-[10px] text-white">4</span>
+                    <p className="text-sm text-muted-foreground">She gets a call from a friend, which keeps her busy for a while. In the meantime, her log in session on the website expires.</p>
+                  </div>
+                </div>
+
+                {/* Resume phase */}
+                <div className="mb-2 mt-6">
+                  <span className="inline-block rounded-full bg-destructive px-3 py-1 font-display text-xs font-bold text-destructive-foreground">Resume</span>
+                </div>
+                <div className="flex flex-col gap-4 border-l-2 border-destructive/30 pl-6">
+                  <div className="relative rounded-lg border border-border bg-card p-4">
+                    <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-destructive text-[10px] text-destructive-foreground">5</span>
+                    <p className="text-sm text-muted-foreground">She logs back in to her account after her call, to complete her purchase journey.</p>
+                  </div>
+                  <div className="relative rounded-lg border border-destructive/40 bg-destructive/5 p-4">
+                    <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-destructive text-[10px] text-destructive-foreground">6</span>
+                    <p className="text-sm font-medium text-destructive">She scans for the cart icon. To her surprise, there is no indication that there is a product in her cart, and no direct prompt for her to continue from where she left off.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
           <Section title="4. The Solution">
             <p>We moved into ideation and prototyping, focusing on a Unified Cart System. I worked closely with engineering to ensure the designs were feasible within the backend constraints.</p>
 
