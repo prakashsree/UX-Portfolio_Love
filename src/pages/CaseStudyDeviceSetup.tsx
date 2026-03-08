@@ -425,8 +425,8 @@ const Section = ({ title, children }: { title: string; children: React.ReactNode
     viewport={{ once: true }}
     className="mb-12"
   >
-    <h2 className="mb-4 font-display text-2xl font-bold text-foreground">{title}</h2>
-    <div className="space-y-3 font-body text-base leading-relaxed text-muted-foreground">{children}</div>
+    <h2 className="mb-2 font-display text-2xl font-bold text-foreground">{title}</h2>
+    <div className="space-y-2 font-body text-base leading-relaxed text-muted-foreground">{children}</div>
   </motion.div>
 );
 
