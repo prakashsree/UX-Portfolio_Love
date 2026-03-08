@@ -28,6 +28,17 @@ const projects = [
     image: deviceImg,
     link: "/case-study/device-setup",
   },
+  {
+    id: "poc-rfp",
+    title: "Proof of Concept / RFP",
+    subtitle: "UX Design & Strategy",
+    description:
+      "Designed proof-of-concept prototypes for diverse clients — from restaurant ordering apps to telecom dashboards and vehicle service platforms — demonstrating practical UX potential.",
+    role: "UX Designer",
+    tags: ["Wireframing", "Prototyping", "UX Strategy", "Native Apps"],
+    image: pocImg,
+    link: "/case-study/poc-rfp",
+  },
 ];
 
 const WorkSection = () => {
