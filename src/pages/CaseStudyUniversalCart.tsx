@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, Users, MessageSquare, Search } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -88,11 +88,29 @@ const UniversalCartCaseStudy = () => {
 
           <Section title="2. Discovery & Research">
             <p>To understand why users were abandoning carts, I led a mixed-methods research phase focusing on the end-to-end purchase experience.</p>
-            <ul className="mt-4 list-disc space-y-2 pl-5">
-              <li><strong>User Interviews:</strong> I conducted 30 remote, one-on-one interviews with customers who had abandoned a cart or quote in the last 30 days.</li>
-              <li><strong>Stakeholder Feedback:</strong> I gathered insights from Customer Service and Sales teams to understand the barriers they faced when trying to close a sale initiated online.</li>
-              <li><strong>Competitive Audit:</strong> We analyzed competitors like AT&T and T-Mobile to benchmark best practices for quote-to-cart transitions.</li>
-            </ul>
+            <div className="mt-6 grid gap-4 sm:grid-cols-3">
+              <div className="rounded-xl border border-border bg-card p-5">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                  <Users className="h-5 w-5 text-primary" />
+                </div>
+                <h4 className="font-display text-sm font-bold text-foreground">User Interviews</h4>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">Conducted 30 remote, one-on-one interviews with customers who had abandoned a cart or quote in the last 30 days.</p>
+              </div>
+              <div className="rounded-xl border border-border bg-card p-5">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                  <MessageSquare className="h-5 w-5 text-primary" />
+                </div>
+                <h4 className="font-display text-sm font-bold text-foreground">Stakeholder Feedback</h4>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">Gathered insights from Customer Service and Sales teams to understand barriers they faced when closing a sale initiated online.</p>
+              </div>
+              <div className="rounded-xl border border-border bg-card p-5">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                  <Search className="h-5 w-5 text-primary" />
+                </div>
+                <h4 className="font-display text-sm font-bold text-foreground">Competitive Audit</h4>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">Analyzed competitors like AT&T and T-Mobile to benchmark best practices for quote-to-cart transitions.</p>
+              </div>
+            </div>
 
             <h3 className="mb-3 mt-6 font-display text-lg font-bold text-foreground">Study Setup</h3>
             <p><strong>Study Objective:</strong> Capture the end-to-end experience of customers who abandoned their cart while making a purchase to uncover:</p>
