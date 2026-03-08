@@ -7,6 +7,7 @@ import cartImg from "@/assets/case-universal-cart.jpg";
 import personaImg from "@/assets/persona-sam.jpg";
 import multiQuoteImg from "@/assets/multi-quote-comparison.png";
 import smartConciergeImg from "@/assets/smart-concierge-quote.png";
+import successImg from "@/assets/smart-concierge-success.png";
 
 const UniversalCartCaseStudy = () => {
   return (
