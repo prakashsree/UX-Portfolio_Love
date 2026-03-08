@@ -15,14 +15,14 @@ const UniversalCartCaseStudy = () => {
           <div className="container mx-auto px-6">
             <Link
               to="/"
-              className="mb-8 inline-flex items-center gap-2 font-body text-sm text-muted-foreground transition-colors hover:text-primary"
-            >
+              className="mb-8 inline-flex items-center gap-2 font-body text-sm text-muted-foreground transition-colors hover:text-primary">
+              
               <ArrowLeft className="h-4 w-4" /> Back to Home
             </Link>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
+              animate={{ opacity: 1, y: 0 }}>
+              
               <p className="mb-2 font-body text-sm font-medium uppercase tracking-wider text-primary">
                 Communications & Technology
               </p>
@@ -53,7 +53,7 @@ const UniversalCartCaseStudy = () => {
             <div className="grid gap-3 sm:grid-cols-2">
               <div><span className="font-semibold text-foreground">Role:</span> Senior UX Designer (Individual Contributor)</div>
               <div><span className="font-semibold text-foreground">Scope:</span> Research, Design Thinking, Prototyping, A/B Testing</div>
-              <div><span className="font-semibold text-foreground">Tools:</span> Figma, Sketch, UserZoom</div>
+              <div><span className="font-semibold text-foreground">Tools:</span>Tools: Figma, Sketch, User</div>
               <div><span className="font-semibold text-foreground">Timeline:</span> 3-month initial sprint for recovery improvements</div>
             </div>
           </div>
@@ -145,20 +145,20 @@ const UniversalCartCaseStudy = () => {
         </div>
       </main>
       <Footer />
-    </>
-  );
+    </>);
+
 };
 
-const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    className="mb-12"
-  >
+const Section = ({ title, children }: {title: string;children: React.ReactNode;}) =>
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  className="mb-12">
+  
     <h2 className="mb-4 font-display text-2xl font-bold text-foreground">{title}</h2>
     <div className="space-y-3 font-body text-base leading-relaxed text-muted-foreground">{children}</div>
-  </motion.div>
-);
+  </motion.div>;
+
 
 export default UniversalCartCaseStudy;
