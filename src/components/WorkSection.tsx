@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import cartImg from "@/assets/case-universal-cart.jpg";
 import deviceImg from "@/assets/case-device-setup.jpg";
+import bcspImg from "@/assets/case-bcsp-services.jpg";
 
 const projects = [
   {
@@ -26,6 +27,17 @@ const projects = [
     tags: ["UX Design", "Information Architecture", "User Flows"],
     image: deviceImg,
     link: "/case-study/device-setup",
+  },
+  {
+    id: "bcsp-services",
+    title: "BCSP Services",
+    subtitle: "Communications & Technology",
+    description:
+      "Discovered service offerings within BCSP and provided UX feedback through surveys, heuristic evaluations, and chatbot design to improve user experience.",
+    role: "UX Designer",
+    tags: ["User Research", "Surveys", "Heuristic Evaluation", "Chatbots"],
+    image: bcspImg,
+    link: "/case-study/bcsp-services",
   },
 ];
 
