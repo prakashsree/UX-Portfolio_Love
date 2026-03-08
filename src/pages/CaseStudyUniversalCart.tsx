@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import cartImg from "@/assets/case-universal-cart.jpg";
 import personaImg from "@/assets/persona-sam.jpg";
+import multiQuoteImg from "@/assets/multi-quote-comparison.png";
+import smartConciergeImg from "@/assets/smart-concierge-quote.png";
 
 const UniversalCartCaseStudy = () => {
   return (
