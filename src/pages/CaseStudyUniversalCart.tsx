@@ -207,6 +207,157 @@ const UniversalCartCaseStudy = () => {
             </div>
           </motion.div>
 
+          {/* User Journey: MVA to .COM */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="mb-4 font-display text-2xl font-bold text-foreground">User Journey: MVA to .COM</h2>
+            <div className="relative flex flex-col gap-0">
+              <div className="mb-2">
+                <span className="inline-block rounded-full bg-primary px-3 py-1 font-display text-xs font-bold text-primary-foreground">Start</span>
+              </div>
+              <div className="flex flex-col gap-4 border-l-2 border-primary/30 pl-6">
+                <div className="relative rounded-lg border border-border bg-card p-4">
+                  <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-primary-foreground">1</span>
+                  <p className="text-sm text-muted-foreground">Sam is an existing customer.</p>
+                </div>
+                <div className="relative rounded-lg border border-border bg-card p-4">
+                  <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-primary-foreground">2</span>
+                  <p className="text-sm text-muted-foreground">On her way back home from work, Sam notices an offer for the new iPhone.</p>
+                </div>
+                <div className="relative rounded-lg border border-border bg-card p-4">
+                  <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-primary-foreground">3</span>
+                  <p className="text-sm text-muted-foreground">Sam opens the My Verizon app to begin her purchase journey and adds the new iPhone to her cart.</p>
+                </div>
+              </div>
+
+              <div className="mb-2 mt-6">
+                <span className="inline-block rounded-full bg-yellow-500 px-3 py-1 font-display text-xs font-bold text-white">Pause</span>
+              </div>
+              <div className="flex flex-col gap-4 border-l-2 border-yellow-500/30 pl-6">
+                <div className="relative rounded-lg border border-border bg-card p-4">
+                  <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-yellow-500 text-[10px] text-white">4</span>
+                  <p className="text-sm text-muted-foreground">Her phone runs out of battery before she can complete the purchase.</p>
+                </div>
+              </div>
+
+              <div className="mb-2 mt-6">
+                <span className="inline-block rounded-full bg-destructive px-3 py-1 font-display text-xs font-bold text-destructive-foreground">Resume</span>
+              </div>
+              <div className="flex flex-col gap-4 border-l-2 border-destructive/30 pl-6">
+                <div className="relative rounded-lg border border-border bg-card p-4">
+                  <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-destructive text-[10px] text-destructive-foreground">5</span>
+                  <p className="text-sm text-muted-foreground">After reaching home and relaxing for a bit, Sam signs in to her account from her laptop to complete her purchase.</p>
+                </div>
+                <div className="relative rounded-lg border border-destructive/40 bg-destructive/5 p-4">
+                  <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-destructive text-[10px] text-destructive-foreground">6</span>
+                  <p className="text-sm font-medium text-destructive">On checking her cart, Sam noticed that her cart was empty, which was very surprising and disturbing. The progress of her purchase journey was lost.</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* User Journey: MVA to MVA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="mb-4 font-display text-2xl font-bold text-foreground">User Journey: MVA to MVA</h2>
+            <div className="relative flex flex-col gap-0">
+              <div className="mb-2">
+                <span className="inline-block rounded-full bg-primary px-3 py-1 font-display text-xs font-bold text-primary-foreground">Start</span>
+              </div>
+              <div className="flex flex-col gap-4 border-l-2 border-primary/30 pl-6">
+                <div className="relative rounded-lg border border-border bg-card p-4">
+                  <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-primary-foreground">1</span>
+                  <p className="text-sm text-muted-foreground">Sam opens the My Verizon app on her phone during her lunch break to browse upgrade options.</p>
+                </div>
+                <div className="relative rounded-lg border border-border bg-card p-4">
+                  <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-primary-foreground">2</span>
+                  <p className="text-sm text-muted-foreground">She customizes a new device, selects a plan, and adds it to her cart in the app.</p>
+                </div>
+              </div>
+
+              <div className="mb-2 mt-6">
+                <span className="inline-block rounded-full bg-yellow-500 px-3 py-1 font-display text-xs font-bold text-white">Pause</span>
+              </div>
+              <div className="flex flex-col gap-4 border-l-2 border-yellow-500/30 pl-6">
+                <div className="relative rounded-lg border border-border bg-card p-4">
+                  <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-yellow-500 text-[10px] text-white">3</span>
+                  <p className="text-sm text-muted-foreground">Her lunch break ends, and she closes the app before completing checkout.</p>
+                </div>
+              </div>
+
+              <div className="mb-2 mt-6">
+                <span className="inline-block rounded-full bg-destructive px-3 py-1 font-display text-xs font-bold text-destructive-foreground">Resume</span>
+              </div>
+              <div className="flex flex-col gap-4 border-l-2 border-destructive/30 pl-6">
+                <div className="relative rounded-lg border border-border bg-card p-4">
+                  <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-destructive text-[10px] text-destructive-foreground">4</span>
+                  <p className="text-sm text-muted-foreground">Later that evening, Sam re-opens the My Verizon app on the same phone to finish her purchase.</p>
+                </div>
+                <div className="relative rounded-lg border border-destructive/40 bg-destructive/5 p-4">
+                  <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-destructive text-[10px] text-destructive-foreground">5</span>
+                  <p className="text-sm font-medium text-destructive">The app shows no saved cart. Sam has to start the entire configuration process over again, wasting her time and increasing frustration.</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* User Journey: .COM to MVA */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-12"
+          >
+            <h2 className="mb-4 font-display text-2xl font-bold text-foreground">User Journey: .COM to MVA</h2>
+            <div className="relative flex flex-col gap-0">
+              <div className="mb-2">
+                <span className="inline-block rounded-full bg-primary px-3 py-1 font-display text-xs font-bold text-primary-foreground">Start</span>
+              </div>
+              <div className="flex flex-col gap-4 border-l-2 border-primary/30 pl-6">
+                <div className="relative rounded-lg border border-border bg-card p-4">
+                  <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-primary-foreground">1</span>
+                  <p className="text-sm text-muted-foreground">Sam sits down at her laptop at home and browses the website for a new phone deal she saw advertised.</p>
+                </div>
+                <div className="relative rounded-lg border border-border bg-card p-4">
+                  <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] text-primary-foreground">2</span>
+                  <p className="text-sm text-muted-foreground">She picks out a device, selects accessories, and adds everything to her cart on the website.</p>
+                </div>
+              </div>
+
+              <div className="mb-2 mt-6">
+                <span className="inline-block rounded-full bg-yellow-500 px-3 py-1 font-display text-xs font-bold text-white">Pause</span>
+              </div>
+              <div className="flex flex-col gap-4 border-l-2 border-yellow-500/30 pl-6">
+                <div className="relative rounded-lg border border-border bg-card p-4">
+                  <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-yellow-500 text-[10px] text-white">3</span>
+                  <p className="text-sm text-muted-foreground">She needs to leave the house for an errand and closes her laptop before checking out.</p>
+                </div>
+              </div>
+
+              <div className="mb-2 mt-6">
+                <span className="inline-block rounded-full bg-destructive px-3 py-1 font-display text-xs font-bold text-destructive-foreground">Resume</span>
+              </div>
+              <div className="flex flex-col gap-4 border-l-2 border-destructive/30 pl-6">
+                <div className="relative rounded-lg border border-border bg-card p-4">
+                  <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-destructive text-[10px] text-destructive-foreground">4</span>
+                  <p className="text-sm text-muted-foreground">While waiting at the store, Sam opens the My Verizon app on her phone hoping to quickly complete checkout.</p>
+                </div>
+                <div className="relative rounded-lg border border-destructive/40 bg-destructive/5 p-4">
+                  <span className="absolute -left-[1.85rem] top-4 flex h-4 w-4 items-center justify-center rounded-full bg-destructive text-[10px] text-destructive-foreground">5</span>
+                  <p className="text-sm font-medium text-destructive">Her cart in the app is empty — nothing she added on the website carried over. Sam gives up and decides to try again another day, risking losing the deal entirely.</p>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+
           <Section title="4. The Solution">
             <p>We moved into ideation and prototyping, focusing on a Unified Cart System. I worked closely with engineering to ensure the designs were feasible within the backend constraints.</p>
 
