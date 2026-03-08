@@ -194,6 +194,7 @@ const UniversalCartCaseStudy = () => {
                 <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">When users returned to a cart, prices or promos might have changed. Without clear messaging, users felt confused and abandoned the cart again.</p>
               </div>
             </div>
+            </div>
           </Section>
 
           <Section title="3. Defining the Problem">
