@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import cartImg from "@/assets/case-universal-cart.jpg";
+import personaImg from "@/assets/persona-sam.jpg";
 
 const UniversalCartCaseStudy = () => {
   return (
@@ -116,9 +117,7 @@ const UniversalCartCaseStudy = () => {
               <div className="flex flex-col gap-6 sm:flex-row">
                 <div className="flex-shrink-0">
                   <div className="relative h-48 w-40 overflow-hidden rounded-lg bg-muted">
-                    <div className="flex h-full w-full items-center justify-center text-muted-foreground">
-                      <svg xmlns="http://www.w3.org/2000/svg" className="h-16 w-16 opacity-40" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" /></svg>
-                    </div>
+                    <img src={personaImg} alt="User persona - Sam" className="h-full w-full object-cover" />
                   </div>
                   <p className="mt-2 text-center text-xs italic text-primary">"I appreciate shopping experiences that are quick, convenient and simple."</p>
                 </div>
