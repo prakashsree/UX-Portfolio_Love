@@ -71,7 +71,19 @@ const UniversalCartCaseStudy = () => {
           <Section title="1. The Challenge">
             <p>A leading global telecommunications provider was facing a significant revenue leak: high cart abandonment rates across digital channels. The problem went deeper than just "change of mind." Our analytics revealed a disconnect between online and offline experiences.</p>
             <p>Customers would start a journey on a mobile device, or get a quote in-store (POS), but struggle to resume that journey later on a desktop or via a different channel. Sales representatives (Reps) also lacked visibility into digital carts, often forcing them to rebuild orders from scratch — a redundancy that frustrated customers and wasted time.</p>
-            <p className="mt-4 rounded-md border-l-4 border-primary bg-secondary/50 p-4 font-semibold text-foreground">The Goal: Create a "Universal Cart" experience that persists across devices and channels, increasing cart recovery by 20% and quote-to-cart conversion by 15%.</p>
+            <div className="mt-6 rounded-xl border border-primary/20 bg-primary/5 p-6">
+              <div className="flex items-start gap-3">
+                <span className="mt-0.5 flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-primary text-lg text-primary-foreground">🎯</span>
+                <div>
+                  <h4 className="font-display text-sm font-bold uppercase tracking-wider text-primary">The Goal</h4>
+                  <p className="mt-1 text-base font-medium leading-relaxed text-foreground">Create a "Universal Cart" experience that persists across devices and channels.</p>
+                  <div className="mt-3 flex flex-wrap gap-3">
+                    <span className="rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">↑ 20% Cart Recovery</span>
+                    <span className="rounded-full bg-primary/10 px-4 py-1.5 text-sm font-semibold text-primary">↑ 15% Quote-to-Cart Conversion</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </Section>
 
           <Section title="2. Discovery & Research">
