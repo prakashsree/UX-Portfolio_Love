@@ -9,6 +9,7 @@ import multiQuoteImg from "@/assets/multi-quote-comparison.png";
 import smartConciergeImg from "@/assets/smart-concierge-quote.png";
 import successImg from "@/assets/smart-concierge-success.png";
 import appreciationImg from "@/assets/appreciation-email.png";
+import awardsImg from "@/assets/awards-bravo.png";
 import surveyImg from "@/assets/survey-questions.png";
 
 const UniversalCartCaseStudy = () => {
@@ -467,6 +468,18 @@ const UniversalCartCaseStudy = () => {
               className="overflow-hidden rounded-xl border border-border shadow-md"
             >
               <img src={appreciationImg} alt="Stakeholder appreciation email for Pause & Resume design contributions" className="w-full" />
+            </motion.div>
+          </Section>
+
+          <Section title="9. Awards">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="overflow-hidden rounded-xl border border-border shadow-md"
+            >
+              <img src={awardsImg} alt="Bravo Award certificate awarded to Prakash Sundarraj by Tech Mahindra" className="w-full" />
             </motion.div>
           </Section>
         </div>
