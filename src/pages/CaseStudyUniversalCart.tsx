@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Users, MessageSquare, Search, ClipboardList, CircleAlert, ShoppingCart, Bookmark, CircleHelp, Smartphone, EyeOff, TriangleAlert } from "lucide-react";
+import { ArrowLeft, Users, MessageSquare, Search, ClipboardList, CircleAlert, ShoppingCart, Bookmark, CircleHelp, Smartphone, EyeOff, TriangleAlert, Lightbulb } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -164,7 +164,14 @@ const UniversalCartCaseStudy = () => {
             </div>
 
             {/* Key Insights */}
-            <div className="mt-6 grid gap-4 sm:grid-cols-3">
+            <div className="mt-8">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-destructive/10">
+                  <Lightbulb className="h-5 w-5 text-destructive" />
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground">Key Insights</h3>
+              </div>
+            <div className="grid gap-4 sm:grid-cols-3">
               <div className="rounded-xl border border-destructive/20 bg-destructive/5 p-5">
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-destructive/10">
                   <Smartphone className="h-5 w-5 text-destructive" />
@@ -186,6 +193,7 @@ const UniversalCartCaseStudy = () => {
                 <h4 className="font-display text-sm font-bold text-foreground">Lack of Context</h4>
                 <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">When users returned to a cart, prices or promos might have changed. Without clear messaging, users felt confused and abandoned the cart again.</p>
               </div>
+            </div>
             </div>
           </Section>
 
