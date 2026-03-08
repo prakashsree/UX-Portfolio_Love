@@ -224,6 +224,8 @@ const DeviceSetupCaseStudy = () => {
           <Section title="4. Define">
             <p>Based on research, created detailed personas representing different user types. Each persona had specific goals and challenges that guided the design process.</p>
 
+            <img src={touchpointsImg} alt="Customer touch points and factors impacting experience" className="mt-6 mb-4 w-full rounded-lg" />
+
             <h3 className="mb-3 mt-6 font-display text-lg font-bold text-foreground">Pain Points & Opportunities</h3>
             <div className="space-y-3">
               {[
