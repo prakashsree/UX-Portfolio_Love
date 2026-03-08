@@ -8,6 +8,7 @@ import dsHeuristicEval from "@/assets/ds-heuristic-eval.png";
 import dsPersonaJonathan from "@/assets/ds-persona-jonathan.jpg";
 import touchpointsImg from "@/assets/ds-touchpoints.png";
 import userflowWorkshopImg from "@/assets/ds-userflow-workshop.png";
+import prototypeDeviceSetupImg from "@/assets/ds-prototype-device-setup.png";
 
 const DeviceSetupCaseStudy = () => {
   return (
@@ -309,6 +310,7 @@ const DeviceSetupCaseStudy = () => {
           {/* 6. Prototype */}
           <Section title="6. Prototype">
             <p>Identified the key use cases and created interactive hi-fidelity prototypes to simulate user interactions.</p>
+            <img src={prototypeDeviceSetupImg} alt="Verizon device setup guide - Getting started prototype" className="mt-6 mb-4 w-full rounded-lg" />
             <div className="mt-6 rounded-xl border border-border bg-card p-6">
               <h3 className="mb-3 font-display text-lg font-bold text-foreground">Key Use Case — Device Setup & Activate</h3>
               <ul className="list-disc space-y-2 pl-5 text-sm text-muted-foreground">
