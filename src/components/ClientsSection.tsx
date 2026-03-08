@@ -40,7 +40,7 @@ const ClientsSection = () => {
               <img
                 src={client.logo}
                 alt={`${client.name} logo`}
-                className="h-10 w-auto object-contain opacity-60 grayscale transition-all group-hover:opacity-100 group-hover:grayscale-0"
+                className="h-16 w-auto object-contain opacity-60 grayscale transition-all group-hover:opacity-100 group-hover:grayscale-0"
               />
               <span className="font-body text-xs text-muted-foreground/50 transition-colors group-hover:text-primary">
                 {client.name}
