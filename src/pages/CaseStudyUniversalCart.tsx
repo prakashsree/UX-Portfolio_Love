@@ -9,6 +9,7 @@ import multiQuoteImg from "@/assets/multi-quote-comparison.png";
 import smartConciergeImg from "@/assets/smart-concierge-quote.png";
 import successImg from "@/assets/smart-concierge-success.png";
 import appreciationImg from "@/assets/appreciation-email.png";
+import awardsImg from "@/assets/awards-bravo.png";
 import surveyImg from "@/assets/survey-questions.png";
 
 const UniversalCartCaseStudy = () => {
