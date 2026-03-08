@@ -9,6 +9,7 @@ import dsPersonaJonathan from "@/assets/ds-persona-jonathan.jpg";
 import touchpointsImg from "@/assets/ds-touchpoints.png";
 import userflowWorkshopImg from "@/assets/ds-userflow-workshop.png";
 import prototypeDeviceSetupImg from "@/assets/ds-prototype-device-setup.png";
+import solutionDeviceSetupImg from "@/assets/ds-solution-device-setup.png";
 
 const DeviceSetupCaseStudy = () => {
   return (
@@ -344,6 +345,7 @@ const DeviceSetupCaseStudy = () => {
                 </div>
               ))}
             </div>
+            <img src={solutionDeviceSetupImg} alt="Device setup solution screens showing Getting Started and New Device Guide" className="mt-6 w-full rounded-lg" />
           </Section>
 
           {/* 8. Implement & Validate */}
