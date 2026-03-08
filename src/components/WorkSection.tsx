@@ -3,6 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import cartImg from "@/assets/case-universal-cart.jpg";
 import deviceImg from "@/assets/case-device-setup.jpg";
+import pocImg from "@/assets/poc-hero.jpg";
 
 const projects = [
   {
