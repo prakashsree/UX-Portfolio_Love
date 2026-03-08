@@ -345,6 +345,7 @@ const DeviceSetupCaseStudy = () => {
                 </div>
               ))}
             </div>
+            <img src={solutionDeviceSetupImg} alt="Device setup solution screens showing Getting Started and New Device Guide" className="mt-6 w-full rounded-lg" />
           </Section>
 
           {/* 8. Implement & Validate */}
