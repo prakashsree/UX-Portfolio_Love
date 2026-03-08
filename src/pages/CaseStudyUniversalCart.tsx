@@ -384,6 +384,7 @@ const UniversalCartCaseStudy = () => {
             </div>
           </Section>
 
+          <Section title="4. The Solution">
             <p>We moved into ideation and prototyping, focusing on a Unified Cart System. I worked closely with engineering to ensure the designs were feasible within the backend constraints.</p>
 
             <h3 className="mb-3 mt-6 font-display text-lg font-bold text-foreground">A. The "Universal" Cross-Channel Cart</h3>
