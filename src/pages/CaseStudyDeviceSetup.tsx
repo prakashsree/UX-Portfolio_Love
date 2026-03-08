@@ -178,7 +178,7 @@ const DeviceSetupCaseStudy = () => {
 
           {/* Heuristic Evaluation */}
           <Section title="Heuristic Evaluation">
-            <img src={dsHeuristicEval} alt="Heuristic Evaluation - Smart Setup page with User Control & Freedom findings" className="mb-2 max-h-72 w-auto rounded-lg border border-border" />
+            <img src={dsHeuristicEval} alt="Heuristic Evaluation - Smart Setup page with User Control & Freedom findings" className="mb-2 max-w-lg rounded-lg border border-border" />
             <h3 className="mb-3 font-display text-lg font-bold text-foreground">Key Findings (Severity Rated)</h3>
             <div className="space-y-4">
               {[
