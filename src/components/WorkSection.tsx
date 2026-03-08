@@ -40,6 +40,17 @@ const projects = [
     image: pocImg,
     link: "/case-study/poc-rfp",
   },
+  {
+    id: "bcsp-services",
+    title: "BCSP Services",
+    subtitle: "Communications & Technology",
+    description:
+      "Discovered service offerings within BCSP and provided UX feedback through surveys, heuristic evaluations, and user interviews to improve collaboration tools.",
+    role: "UX Designer",
+    tags: ["UX Research", "Heuristic Evaluation", "Survey Design", "Chatbots"],
+    image: bcspImg,
+    link: "/case-study/bcsp-services",
+  },
 ];
 
 const WorkSection = () => {
