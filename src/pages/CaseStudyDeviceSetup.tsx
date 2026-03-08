@@ -265,7 +265,7 @@ const DeviceSetupCaseStudy = () => {
           </Section>
 
           {/* Customer Journey */}
-          <Section title="Customer Journey — Jonathan's Story">
+          <Section title="">
             <img src={dsJourney} alt="Customer journey map" className="w-full rounded-xl shadow-card" />
             <div className="mt-6 grid gap-4 sm:grid-cols-3">
               {[
