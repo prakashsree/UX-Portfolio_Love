@@ -71,6 +71,29 @@ const UniversalCartCaseStudy = () => {
               <li><strong>Stakeholder Feedback:</strong> I gathered insights from Customer Service and Sales teams to understand the barriers they faced when trying to close a sale initiated online.</li>
               <li><strong>Competitive Audit:</strong> We analyzed competitors like AT&T and T-Mobile to benchmark best practices for quote-to-cart transitions.</li>
             </ul>
+
+            <h3 className="mb-3 mt-6 font-display text-lg font-bold text-foreground">Study Setup</h3>
+            <p><strong>Study Objective:</strong> Capture the end-to-end experience of customers who abandoned their cart while making a purchase to uncover:</p>
+            <ul className="mt-2 list-disc space-y-1 pl-5">
+              <li>Expectations, needs and pain points about the current purchase process</li>
+              <li>Reasons why carts are abandoned and returned to</li>
+              <li>Customer awareness of current save cart features</li>
+            </ul>
+
+            <p className="mt-4"><strong>Sample Key Research Questions:</strong></p>
+            <ol className="mt-2 list-decimal space-y-2 pl-5">
+              <li>What factors do customers consider when choosing what to add to their cart?
+                <ul className="mt-1 list-disc pl-5"><li>When choosing to checkout?</li></ul>
+              </li>
+              <li>What are the reasons behind customers abandoning their shopping carts before checkout?</li>
+              <li>In what instances do customers decide to return to an abandoned cart and checkout?</li>
+              <li>How long does it take for customers to make a purchase?</li>
+              <li>Do customers have any specific expectations when making a purchase?</li>
+              <li>Are customers aware that their cart is saved with the "Save cart for later" feature? Do they know how that feature works?</li>
+              <li>What information would customers like to have when returning to complete the checkout process?
+                <ul className="mt-1 list-disc pl-5"><li>What would they like that information to look like (e.g., quick and simplistic checkout or more comprehensive information and context about purchase)?</li></ul>
+              </li>
+            </ol>
             <h3 className="mb-3 mt-6 font-display text-lg font-bold text-foreground">Key Insights</h3>
             <ul className="list-disc space-y-2 pl-5">
               <li><strong>Device Switching Friction:</strong> Customers frequently switched devices (Mobile App to Desktop Web) but lost their progress, forcing them to restart.</li>
