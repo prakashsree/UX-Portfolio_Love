@@ -51,6 +51,9 @@ const UniversalCartCaseStudy = () => {
         {/* Cover image */}
         <div className="container mx-auto px-6 py-12">
           <img src={cartImg} alt="Universal Cart case study" className="w-full rounded-xl object-cover shadow-card" />
+          <p className="mt-4 text-center text-xs italic text-muted-foreground">
+            Note: This portfolio (contents/images) are for demonstration purpose only. To comply with my non-disclosure agreement, I have omitted and obfuscated confidential information in this portfolio. It should not be disclosed to any third party. Please feel free to contact me for further details. Some images and screens are blurred for confidentiality.
+          </p>
         </div>
 
         {/* Content */}
