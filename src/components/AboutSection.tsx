@@ -45,7 +45,7 @@ const AboutSection = () => {
               {[
               { value: "12+", label: "Years Experience" },
               { value: "5+", label: "Industry Domains" },
-              { value: "30+", label: "Projects Delivered" }].
+              { value: "20+", label: "Projects Delivered" }].
               map((stat) =>
               <div key={stat.label}>
                   <div className="font-display text-2xl font-bold text-primary">{stat.value}</div>
