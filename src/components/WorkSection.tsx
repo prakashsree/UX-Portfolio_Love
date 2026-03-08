@@ -24,8 +24,8 @@ const projects = [
     subtitle: "Communications & Technology",
     description:
       "Created a unified, easy-to-follow device setup experience that centralizes all setup assets and increases adoption of tech support offerings.",
-    role: "Lead Designer",
-    tags: ["UX Design", "Information Architecture", "User Flows"],
+    role: "Sr UX Designer",
+    tags: ["Research", "Design Thinking", "Prototyping", "Usability Testing"],
     image: deviceImg,
     link: "/case-study/device-setup",
   },
