@@ -7,6 +7,7 @@ import deviceImg from "@/assets/ds-wizard-step1.png";
 import dsHeuristicEval from "@/assets/ds-heuristic-eval.png";
 import dsPersonaJonathan from "@/assets/ds-persona-jonathan.jpg";
 import touchpointsImg from "@/assets/ds-touchpoints.png";
+import userflowWorkshopImg from "@/assets/ds-userflow-workshop.png";
 
 const DeviceSetupCaseStudy = () => {
   return (
