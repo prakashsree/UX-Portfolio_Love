@@ -10,6 +10,7 @@ import touchpointsImg from "@/assets/ds-touchpoints.png";
 import userflowWorkshopImg from "@/assets/ds-userflow-workshop.png";
 import prototypeDeviceSetupImg from "@/assets/ds-prototype-device-setup.png";
 import solutionDeviceSetupImg from "@/assets/ds-solution-device-setup.png";
+import heatmapTasksImg from "@/assets/ds-heatmap-tasks.png";
 
 const DeviceSetupCaseStudy = () => {
   return (
@@ -382,6 +383,8 @@ const DeviceSetupCaseStudy = () => {
               <blockquote className="text-sm italic text-muted-foreground">"I've already backed up my data, so I just need to turn off 'Find my iPhone' so that I may activate the new device."</blockquote>
             </div>
           </Section>
+
+          <img src={heatmapTasksImg} alt="Click-test heatmaps for Turn off Find my iPhone and Back up your data tasks" className="mb-8 w-full rounded-lg" />
 
           {/* 9. Impact */}
           <Section title="9. Impact">
