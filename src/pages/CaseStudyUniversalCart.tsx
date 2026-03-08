@@ -457,6 +457,18 @@ const UniversalCartCaseStudy = () => {
           <Section title="7. Reflections">
             <p>This project reinforced that in an omnichannel environment, you cannot design for the customer in isolation. You must also design for the employees (Reps) who support them. By solving the Reps' visibility issues, we inadvertently solved the customer's continuity issue.</p>
           </Section>
+
+          <Section title="8. Appreciation">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="overflow-hidden rounded-xl border border-border shadow-md"
+            >
+              <img src={appreciationImg} alt="Stakeholder appreciation email for Pause & Resume design contributions" className="w-full" />
+            </motion.div>
+          </Section>
         </div>
       </main>
       <Footer />
