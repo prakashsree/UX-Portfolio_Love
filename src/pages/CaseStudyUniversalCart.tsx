@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Users, MessageSquare, Search } from "lucide-react";
+import { ArrowLeft, Users, MessageSquare, Search, ClipboardList, CircleAlert, ShoppingCart, Bookmark, CircleHelp, Smartphone, EyeOff, TriangleAlert } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -112,34 +112,81 @@ const UniversalCartCaseStudy = () => {
               </div>
             </div>
 
-            <h3 className="mb-3 mt-6 font-display text-lg font-bold text-foreground">Study Setup</h3>
-            <p><strong>Study Objective:</strong> Capture the end-to-end experience of customers who abandoned their cart while making a purchase to uncover:</p>
-            <ul className="mt-2 list-disc space-y-1 pl-5">
-              <li>Expectations, needs and pain points about the current purchase process</li>
-              <li>Reasons why carts are abandoned and returned to</li>
-              <li>Customer awareness of current save cart features</li>
-            </ul>
+            {/* Study Setup */}
+            <div className="mt-8 rounded-xl border border-border bg-card p-6 md:p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                  <ClipboardList className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground">Study Setup</h3>
+              </div>
+              <p className="text-sm text-muted-foreground"><strong className="text-foreground">Study Objective:</strong> Capture the end-to-end experience of customers who abandoned their cart while making a purchase to uncover:</p>
+              <div className="mt-3 grid gap-3 sm:grid-cols-3">
+                <div className="flex items-start gap-2 rounded-lg bg-muted/50 p-3">
+                  <CircleAlert className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                  <span className="text-sm text-muted-foreground">Expectations, needs and pain points about the current purchase process</span>
+                </div>
+                <div className="flex items-start gap-2 rounded-lg bg-muted/50 p-3">
+                  <ShoppingCart className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                  <span className="text-sm text-muted-foreground">Reasons why carts are abandoned and returned to</span>
+                </div>
+                <div className="flex items-start gap-2 rounded-lg bg-muted/50 p-3">
+                  <Bookmark className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                  <span className="text-sm text-muted-foreground">Customer awareness of current save cart features</span>
+                </div>
+              </div>
+            </div>
 
-            <p className="mt-4"><strong>Sample Key Research Questions:</strong></p>
-            <ol className="mt-2 list-decimal space-y-2 pl-5">
-              <li>What factors do customers consider when choosing what to add to their cart?
-                <ul className="mt-1 list-disc pl-5"><li>When choosing to checkout?</li></ul>
-              </li>
-              <li>What are the reasons behind customers abandoning their shopping carts before checkout?</li>
-              <li>In what instances do customers decide to return to an abandoned cart and checkout?</li>
-              <li>How long does it take for customers to make a purchase?</li>
-              <li>Do customers have any specific expectations when making a purchase?</li>
-              <li>Are customers aware that their cart is saved with the "Save cart for later" feature? Do they know how that feature works?</li>
-              <li>What information would customers like to have when returning to complete the checkout process?
-                <ul className="mt-1 list-disc pl-5"><li>What would they like that information to look like (e.g., quick and simplistic checkout or more comprehensive information and context about purchase)?</li></ul>
-              </li>
-            </ol>
-            <h3 className="mb-3 mt-6 font-display text-lg font-bold text-foreground">Key Insights</h3>
-            <ul className="list-disc space-y-2 pl-5">
-              <li><strong>Device Switching Friction:</strong> Customers frequently switched devices (Mobile App to Desktop Web) but lost their progress, forcing them to restart.</li>
-              <li><strong>The "Black Box" for Reps:</strong> Sales reps couldn't see if a customer had an active digital cart without expanding multiple line items or launching a full order flow, leading them to ignore the digital cart entirely.</li>
-              <li><strong>Lack of Context:</strong> When users did return to a cart, prices or promos might have changed. Without clear messaging explaining the change, users felt confused and abandoned the cart again.</li>
-            </ul>
+            {/* Research Questions */}
+            <div className="mt-6 rounded-xl border border-border bg-card p-6 md:p-8">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                  <CircleHelp className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="font-display text-lg font-bold text-foreground">Sample Key Research Questions</h3>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {[
+                  "What factors do customers consider when choosing what to add to their cart? When choosing to checkout?",
+                  "What are the reasons behind customers abandoning their shopping carts before checkout?",
+                  "In what instances do customers decide to return to an abandoned cart and checkout?",
+                  "How long does it take for customers to make a purchase?",
+                  "Do customers have any specific expectations when making a purchase?",
+                  "Are customers aware that their cart is saved with the \"Save cart for later\" feature? Do they know how that feature works?",
+                  "What information would customers like to have when returning to complete the checkout process? What would they like that information to look like?",
+                ].map((q, i) => (
+                  <div key={i} className="flex items-start gap-3 rounded-lg bg-muted/50 p-3">
+                    <span className="flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">{i + 1}</span>
+                    <p className="text-sm leading-relaxed text-muted-foreground">{q}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Key Insights */}
+            <div className="mt-6 grid gap-4 sm:grid-cols-3">
+              <div className="rounded-xl border border-destructive/20 bg-destructive/5 p-5">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-destructive/10">
+                  <Smartphone className="h-5 w-5 text-destructive" />
+                </div>
+                <h4 className="font-display text-sm font-bold text-foreground">Device Switching Friction</h4>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">Customers frequently switched devices (Mobile App → Desktop Web) but lost their progress, forcing them to restart.</p>
+              </div>
+              <div className="rounded-xl border border-destructive/20 bg-destructive/5 p-5">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-destructive/10">
+                  <EyeOff className="h-5 w-5 text-destructive" />
+                </div>
+                <h4 className="font-display text-sm font-bold text-foreground">The "Black Box" for Reps</h4>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">Sales reps couldn't see if a customer had an active digital cart, leading them to ignore the digital cart entirely and rebuild orders from scratch.</p>
+              </div>
+              <div className="rounded-xl border border-destructive/20 bg-destructive/5 p-5">
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-destructive/10">
+                  <TriangleAlert className="h-5 w-5 text-destructive" />
+                </div>
+                <h4 className="font-display text-sm font-bold text-foreground">Lack of Context</h4>
+                <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">When users returned to a cart, prices or promos might have changed. Without clear messaging, users felt confused and abandoned the cart again.</p>
+              </div>
+            </div>
           </Section>
 
           <Section title="3. Defining the Problem">
