@@ -57,7 +57,7 @@ const UniversalCartCaseStudy = () => {
             <div className="grid gap-3 sm:grid-cols-2">
               <div><span className="font-semibold text-foreground">Role:</span> Senior UX Designer (Individual Contributor)</div>
               <div><span className="font-semibold text-foreground">Task:</span> Research, Design Thinking, Low/Hi Fidelity Prototyping, Spot Testing Ambassador</div>
-              <div><span className="font-semibold text-foreground">Tools:</span>Tools: Figma, Sketch, User</div>
+              <div><span className="font-semibold text-foreground">Tools:</span> Figma, User Testing</div>
               <div><span className="font-semibold text-foreground">Timeline:</span> 3-month initial sprint for recovery improvements</div>
             </div>
           </div>
