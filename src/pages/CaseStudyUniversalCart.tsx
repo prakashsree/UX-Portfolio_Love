@@ -123,7 +123,7 @@ const UniversalCartCaseStudy = () => {
               <p className="text-sm text-muted-foreground"><strong className="text-foreground">Study Objective:</strong> Capture the end-to-end experience of customers who abandoned their cart while making a purchase to uncover:</p>
               <div className="mt-3 grid gap-3 sm:grid-cols-3">
                 <div className="flex items-start gap-2 rounded-lg bg-muted/50 p-3">
-                  <AlertCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
+                  <CircleAlert className="mt-0.5 h-4 w-4 flex-shrink-0 text-primary" />
                   <span className="text-sm text-muted-foreground">Expectations, needs and pain points about the current purchase process</span>
                 </div>
                 <div className="flex items-start gap-2 rounded-lg bg-muted/50 p-3">
