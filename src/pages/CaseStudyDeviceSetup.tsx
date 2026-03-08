@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import deviceImg from "@/assets/case-device-setup.jpg";
+import dsHeuristicEval from "@/assets/ds-heuristic-eval.png";
 
 const DeviceSetupCaseStudy = () => {
   return (
