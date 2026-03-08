@@ -7,6 +7,7 @@ import Index from "./pages/Index";
 import CaseStudyUniversalCart from "./pages/CaseStudyUniversalCart";
 import CaseStudyDeviceSetup from "./pages/CaseStudyDeviceSetup";
 import CaseStudyPOC from "./pages/CaseStudyPOC";
+import CaseStudyBCSP from "./pages/CaseStudyBCSP";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
