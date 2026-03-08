@@ -419,6 +419,16 @@ const UniversalCartCaseStudy = () => {
               <li><strong>The Friction:</strong> 82% of reps admitted they historically didn't resume carts because they feared technical errors or outdated promos.</li>
               <li><strong>The Iteration:</strong> We used this feedback to refine the error handling and ensure the "Last Edited" timestamps were prominent, giving Reps the confidence to use the feature.</li>
             </ul>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="mt-8 overflow-hidden rounded-xl border border-border shadow-md"
+            >
+              <img src={surveyImg} alt="Sample survey questions for Shared Cart tile feedback" className="w-full" />
+            </motion.div>
           </Section>
 
           <Section title="6. The Impact">
