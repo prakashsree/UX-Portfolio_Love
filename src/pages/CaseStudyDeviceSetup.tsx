@@ -384,6 +384,8 @@ const DeviceSetupCaseStudy = () => {
             </div>
           </Section>
 
+          <img src={heatmapTasksImg} alt="Click-test heatmaps for Turn off Find my iPhone and Back up your data tasks" className="mb-8 w-full rounded-lg" />
+
           {/* 9. Impact */}
           <Section title="9. Impact">
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
