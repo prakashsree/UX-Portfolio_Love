@@ -24,8 +24,8 @@ const HeroSection = () => {
               alt="Prakash S"
               className="h-14 w-14 rounded-full border-2 border-primary/50 object-cover" />
             
-            <span className="font-body text-sm text-primary-foreground/70">
-              Lead UX Designer & Business Analyst
+            <span className="font-body text-sm text-primary-foreground/70">Lead UX Designer
+
             </span>
           </motion.div>
 
