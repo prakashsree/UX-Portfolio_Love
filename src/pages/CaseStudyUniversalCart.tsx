@@ -35,7 +35,7 @@ const UniversalCartCaseStudy = () => {
               <div className="flex flex-wrap gap-6 font-body text-sm text-muted-foreground">
                 <div><span className="font-semibold text-foreground">Role:</span> Sr UX Designer</div>
                 <div><span className="font-semibold text-foreground">Type:</span> Individual Contributor</div>
-                <div><span className="font-semibold text-foreground">Methods:</span> Research, Design Thinking, Prototyping, Spot Testing</div>
+                <div><span className="font-semibold text-foreground">Methods:</span>Methods: Research, Design Thinking, Low/High Fidelity Prototyping, Spot Testing Ambassador</div>
               </div>
             </motion.div>
           </div>
@@ -44,10 +44,6 @@ const UniversalCartCaseStudy = () => {
         {/* Cover image */}
         <div className="container mx-auto px-6 py-12">
           <img src={cartImg} alt="Universal Cart case study" className="w-full rounded-xl object-cover shadow-card" />
-          <p className="mt-4 rounded-md border border-border bg-secondary/40 px-5 py-4 font-body text-xs leading-relaxed text-muted-foreground italic">
-            <strong className="not-italic">Note:</strong> This portfolio (contents/images) is for demonstration purposes only. To comply with my non-disclosure agreement, I have omitted and obfuscated confidential information. It should not be disclosed to any third party. Please feel free to contact me for further details.<br /><br />
-            <strong className="not-italic">PS:</strong> Some images and screens are blurred for confidentiality.
-          </p>
         </div>
 
         {/* Content */}
@@ -56,8 +52,8 @@ const UniversalCartCaseStudy = () => {
           <div className="mb-12 rounded-lg border border-border bg-card p-6 font-body text-sm text-muted-foreground">
             <div className="grid gap-3 sm:grid-cols-2">
               <div><span className="font-semibold text-foreground">Role:</span> Senior UX Designer (Individual Contributor)</div>
-              <div><span className="font-semibold text-foreground">Task:</span> Research, Design Thinking, Low/Hi Fidelity Prototyping, Spot Testing Ambassador</div>
-              <div><span className="font-semibold text-foreground">Tools:</span> Figma, User Testing</div>
+              <div><span className="font-semibold text-foreground">Scope:</span> Research, Design Thinking, Prototyping, A/B Testing</div>
+              <div><span className="font-semibold text-foreground">Tools:</span>Tools: Figma, Sketch, User</div>
               <div><span className="font-semibold text-foreground">Timeline:</span> 3-month initial sprint for recovery improvements</div>
             </div>
           </div>
