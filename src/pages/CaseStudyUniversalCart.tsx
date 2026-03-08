@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { ArrowLeft, Users, MessageSquare, Search, ClipboardList, CircleAlert, ShoppingCart, Bookmark, CircleHelp, Smartphone, EyeOff, TriangleAlert, Lightbulb } from "lucide-react";
+import { ArrowLeft, ArrowRight, Users, MessageSquare, Search, ClipboardList, CircleAlert, ShoppingCart, Bookmark, CircleHelp, Smartphone, EyeOff, TriangleAlert, Lightbulb, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
