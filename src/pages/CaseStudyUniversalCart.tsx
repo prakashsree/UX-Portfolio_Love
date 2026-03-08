@@ -49,14 +49,14 @@ const UniversalCartCaseStudy = () => {
         {/* Content */}
         <div className="container mx-auto max-w-3xl px-6 pb-24">
           {/* Role & Scope meta */}
-          <div className="mb-12 rounded-lg border border-border bg-card p-6 font-body text-sm text-muted-foreground">
-            <div className="grid gap-3 sm:grid-cols-2">
-              <div><span className="font-semibold text-foreground">Role:</span> Senior UX Designer (Individual Contributor)</div>
-              <div><span className="font-semibold text-foreground">Scope:</span> Research, Design Thinking, Prototyping, A/B Testing</div>
-              <div><span className="font-semibold text-foreground">Tools:</span>Tools: Figma, Sketch, User</div>
-              <div><span className="font-semibold text-foreground">Timeline:</span> 3-month initial sprint for recovery improvements</div>
-            </div>
-          </div>
+          
+
+
+
+
+
+
+          
 
           <Section title="1. The Challenge">
             <p>A leading global telecommunications provider was facing a significant revenue leak: high cart abandonment rates across digital channels. The problem went deeper than just "change of mind." Our analytics revealed a disconnect between online and offline experiences.</p>
