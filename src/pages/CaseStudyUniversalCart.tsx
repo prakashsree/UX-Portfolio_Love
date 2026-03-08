@@ -181,7 +181,7 @@ const UniversalCartCaseStudy = () => {
               </div>
               <div className="rounded-xl border border-destructive/20 bg-destructive/5 p-5">
                 <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-destructive/10">
-                  <AlertTriangle className="h-5 w-5 text-destructive" />
+                  <TriangleAlert className="h-5 w-5 text-destructive" />
                 </div>
                 <h4 className="font-display text-sm font-bold text-foreground">Lack of Context</h4>
                 <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">When users returned to a cart, prices or promos might have changed. Without clear messaging, users felt confused and abandoned the cart again.</p>
