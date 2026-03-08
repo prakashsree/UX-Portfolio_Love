@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import cartImg from "@/assets/case-universal-cart.jpg";
 import deviceImg from "@/assets/case-device-setup.jpg";
 import bcspImg from "@/assets/case-bcsp-services.jpg";
+import pocImg from "@/assets/case-poc-rfp.jpg";
 
 const projects = [
   {
@@ -38,6 +39,17 @@ const projects = [
     tags: ["User Research", "Surveys", "Heuristic Evaluation", "Chatbots"],
     image: bcspImg,
     link: "/case-study/bcsp-services",
+  },
+  {
+    id: "poc-rfp",
+    title: "Proof of Concept / RFP",
+    subtitle: "Multi-Industry",
+    description:
+      "Design proposals for a Restaurant iOS app, Telecom dashboard, and Vehicle service contracts — verifying concepts with wireframes and UX strategy.",
+    role: "UX Designer",
+    tags: ["Wireframing", "Prototyping", "UX Strategy", "POC"],
+    image: pocImg,
+    link: "/case-study/poc-rfp",
   },
 ];
 
