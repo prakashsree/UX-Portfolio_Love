@@ -470,6 +470,18 @@ const UniversalCartCaseStudy = () => {
               <img src={appreciationImg} alt="Stakeholder appreciation email for Pause & Resume design contributions" className="w-full" />
             </motion.div>
           </Section>
+
+          <Section title="9. Awards">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="overflow-hidden rounded-xl border border-border shadow-md"
+            >
+              <img src={awardsImg} alt="Bravo Award certificate awarded to Prakash Sundarraj by Tech Mahindra" className="w-full" />
+            </motion.div>
+          </Section>
         </div>
       </main>
       <Footer />
