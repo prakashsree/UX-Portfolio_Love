@@ -7,6 +7,7 @@ import deviceImg from "@/assets/ds-wizard-step1.png";
 import dsHeuristicEval from "@/assets/ds-heuristic-eval.png";
 import dsPersonaJonathan from "@/assets/ds-persona-jonathan.jpg";
 import touchpointsImg from "@/assets/ds-touchpoints.png";
+import userflowWorkshopImg from "@/assets/ds-userflow-workshop.png";
 
 const DeviceSetupCaseStudy = () => {
   return (
@@ -292,6 +293,8 @@ const DeviceSetupCaseStudy = () => {
           {/* 5. Ideate */}
           <Section title="5. Ideate">
             <p>Organized Design Thinking workshops with stakeholders (UX team and product management) to generate ideas and solutions for the identified problems.</p>
+            <img src={userflowWorkshopImg} alt="User flow and DT workshop session" className="mt-6 mb-4 w-full rounded-lg" />
+
             <h3 className="mb-3 mt-6 font-display text-lg font-bold text-foreground">Workshop Process</h3>
             <div className="space-y-2">
               {["Key metrics review", "Summary of user research & problem statement", "Key use case / user flow", "Customer Journey walkthrough", "Competitor Analysis review", "Concept Sketches & 'How Might We' exercises"].map((item) => (
