@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import deviceImg from "@/assets/case-device-setup.jpg";
 import dsHeuristicEval from "@/assets/ds-heuristic-eval.png";
+import dsPersonaJonathan from "@/assets/ds-persona-jonathan.jpg";
 
 const DeviceSetupCaseStudy = () => {
   return (
@@ -140,9 +141,7 @@ const DeviceSetupCaseStudy = () => {
             <div className="rounded-xl border border-border bg-card p-6 md:p-8">
               <div className="grid gap-6 md:grid-cols-[200px_1fr]">
                 <div className="flex flex-col items-center text-center">
-                  <div className="flex h-52 w-44 items-center justify-center rounded-lg bg-muted">
-                    <Users className="h-16 w-16 text-muted-foreground/40" />
-                  </div>
+                  <img src={dsPersonaJonathan} alt="Jonathan - Floor Supervisor" className="h-52 w-44 rounded-lg object-cover" />
                   <p className="mt-3 font-display text-base font-bold text-foreground">Jonathan, 52</p>
                   <p className="mt-1 max-w-[200px] text-xs italic text-primary">"I want a clear path for me to follow and activate my new device. Just tell me what to do."</p>
                 </div>
