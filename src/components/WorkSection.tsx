@@ -40,6 +40,17 @@ const projects = [
     image: bcspImg,
     link: "/case-study/bcsp-services",
   },
+  {
+    id: "poc-rfp",
+    title: "Proof of Concept / RFP",
+    subtitle: "Multi-Industry",
+    description:
+      "Design proposals for a Restaurant iOS app, Telecom dashboard, and Vehicle service contracts — verifying concepts with wireframes and UX strategy.",
+    role: "UX Designer",
+    tags: ["Wireframing", "Prototyping", "UX Strategy", "POC"],
+    image: pocImg,
+    link: "/case-study/poc-rfp",
+  },
 ];
 
 const WorkSection = () => {
