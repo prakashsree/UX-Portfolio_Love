@@ -8,7 +8,7 @@ const navItems = [
   { label: "Process", href: "#process" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
-  { label: "Resume", href: "#contact" },
+  { label: "Resume", href: "https://drive.google.com/file/d/1HtVmZxA8GTUJqf6HT96cMXNXitc5B8f4/view?usp=drive_link", external: true },
 ];
 
 const Navbar = () => {
@@ -32,6 +32,7 @@ const Navbar = () => {
             <a
               key={item.label}
               href={item.href}
+              {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
               className="font-body text-sm text-muted-foreground transition-colors hover:text-primary"
             >
               {item.label}
@@ -68,6 +69,7 @@ const Navbar = () => {
                 <a
                   key={item.label}
                   href={item.href}
+                  {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                   onClick={() => setIsOpen(false)}
                   className="font-body text-base text-muted-foreground transition-colors hover:text-primary"
                 >
