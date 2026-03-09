@@ -58,6 +58,7 @@ const Navbar = () => {
           <ThemeToggle />
           <a
             href="#contact"
+            onClick={(e) => handleNavClick(e, "#contact")}
             className="rounded-lg bg-primary px-4 py-2 font-body text-sm font-medium text-primary-foreground transition-shadow hover:shadow-glow"
           >
             Get in Touch
