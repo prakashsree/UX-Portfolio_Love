@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useNavigate, useLocation } from "react-router-dom";
 import ThemeToggle from "./ThemeToggle";
 
 const navItems = [
@@ -13,6 +14,21 @@ const navItems = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string, external?: boolean) => {
+    if (external) return;
+    e.preventDefault();
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+      }, 300);
+    } else {
+      document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [location.pathname, navigate]);
 
   return (
     <motion.nav
@@ -33,6 +49,7 @@ const Navbar = () => {
               key={item.label}
               href={item.href}
               {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              onClick={(e) => handleNavClick(e, item.href, item.external)}
               className="font-body text-sm text-muted-foreground transition-colors hover:text-primary"
             >
               {item.label}
@@ -41,6 +58,7 @@ const Navbar = () => {
           <ThemeToggle />
           <a
             href="#contact"
+            onClick={(e) => handleNavClick(e, "#contact")}
             className="rounded-lg bg-primary px-4 py-2 font-body text-sm font-medium text-primary-foreground transition-shadow hover:shadow-glow"
           >
             Get in Touch
@@ -70,7 +88,7 @@ const Navbar = () => {
                   key={item.label}
                   href={item.href}
                   {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => { handleNavClick(e, item.href, item.external); setIsOpen(false); }}
                   className="font-body text-base text-muted-foreground transition-colors hover:text-primary"
                 >
                   {item.label}
@@ -78,7 +96,7 @@ const Navbar = () => {
               ))}
               <a
                 href="#contact"
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => { handleNavClick(e, "#contact"); setIsOpen(false); }}
                 className="mt-2 rounded-lg bg-primary px-4 py-2 text-center font-body text-sm font-medium text-primary-foreground"
               >
                 Get in Touch
