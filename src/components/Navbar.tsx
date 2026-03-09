@@ -49,6 +49,7 @@ const Navbar = () => {
               key={item.label}
               href={item.href}
               {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+              onClick={(e) => handleNavClick(e, item.href, item.external)}
               className="font-body text-sm text-muted-foreground transition-colors hover:text-primary"
             >
               {item.label}
