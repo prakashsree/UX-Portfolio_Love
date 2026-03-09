@@ -88,7 +88,7 @@ const Navbar = () => {
                   key={item.label}
                   href={item.href}
                   {...(item.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-                  onClick={() => setIsOpen(false)}
+                  onClick={(e) => { handleNavClick(e, item.href, item.external); setIsOpen(false); }}
                   className="font-body text-base text-muted-foreground transition-colors hover:text-primary"
                 >
                   {item.label}
@@ -96,7 +96,7 @@ const Navbar = () => {
               ))}
               <a
                 href="#contact"
-                onClick={() => setIsOpen(false)}
+                onClick={(e) => { handleNavClick(e, "#contact"); setIsOpen(false); }}
                 className="mt-2 rounded-lg bg-primary px-4 py-2 text-center font-body text-sm font-medium text-primary-foreground"
               >
                 Get in Touch
