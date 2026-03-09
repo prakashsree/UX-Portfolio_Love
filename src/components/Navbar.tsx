@@ -8,7 +8,7 @@ const navItems = [
   { label: "Process", href: "#process" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
-  { label: "Resume", href: "#contact" },
+  { label: "Resume", href: "https://drive.google.com/file/d/1HtVmZxA8GTUJqf6HT96cMXNXitc5B8f4/view?usp=drive_link", external: true },
 ];
 
 const Navbar = () => {
