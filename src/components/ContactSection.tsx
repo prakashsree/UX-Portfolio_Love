@@ -28,7 +28,7 @@ const ContactSection = () => {
             </a>
             <a
               href="https://www.linkedin.com/in/prakashsree/"
-              target="_top"
+              target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 font-body font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
             >
