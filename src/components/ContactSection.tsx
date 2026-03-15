@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Mail, Linkedin, ArrowUpRight } from "lucide-react";
+import { Mail, Linkedin, Phone, ArrowUpRight } from "lucide-react";
 
 const ContactSection = () => {
   return (
@@ -19,6 +19,14 @@ const ContactSection = () => {
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+            <a
+              href="tel:+919994479232"
+              className="inline-flex items-center gap-2 rounded-lg border border-border px-6 py-3 font-body font-medium text-foreground transition-colors hover:border-primary hover:text-primary"
+            >
+              <span className="text-base">🇮🇳</span>
+              <Phone className="h-4 w-4" />
+              +91-9994479232
+            </a>
             <a
               href="mailto:prakash.sree@yahoo.com"
               className="inline-flex items-center gap-2 rounded-lg bg-primary px-6 py-3 font-body font-medium text-primary-foreground transition-shadow hover:shadow-glow"
