@@ -12,7 +12,7 @@ const clients = [
   { name: "Huawei", logo: logoHuawei },
   { name: "HMS Host", logo: logoHmshost },
   { name: "Masterbrands Cabinet", logo: logoMasterbrands },
-  { name: "MHRD, Govt of India", logo: logoMhrd },
+  { name: "MHRD, Government of India", logo: logoMhrd },
 ];
 
 const ClientsSection = () => {
@@ -27,7 +27,7 @@ const ClientsSection = () => {
         >
           Trusted by teams at
         </motion.p>
-        <div className="flex flex-wrap items-center justify-center gap-8 md:gap-14">
+        <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
           {clients.map((client, i) => (
             <motion.div
               key={client.name}
@@ -35,14 +35,14 @@ const ClientsSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className="group flex flex-col items-center gap-2 transition-colors"
+              className="group flex flex-col items-center gap-3 transition-colors"
             >
               <img
                 src={client.logo}
                 alt={`${client.name} logo`}
-                className="h-16 w-auto object-contain opacity-60 grayscale transition-all group-hover:opacity-100 group-hover:grayscale-0"
+                className="h-20 w-auto object-contain opacity-70 grayscale transition-all group-hover:opacity-100 group-hover:grayscale-0"
               />
-              <span className="font-body text-xs text-muted-foreground/50 transition-colors group-hover:text-primary">
+              <span className="font-body text-sm font-medium text-muted-foreground/70 transition-colors group-hover:text-primary">
                 {client.name}
               </span>
             </motion.div>
