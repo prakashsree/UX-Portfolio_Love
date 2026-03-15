@@ -12,7 +12,7 @@ const clients = [
   { name: "Huawei", logo: logoHuawei },
   { name: "HMS Host", logo: logoHmshost },
   { name: "Masterbrands Cabinet", logo: logoMasterbrands },
-  { name: "MHRD, Govt of India", logo: logoMhrd },
+  { name: "MHRD, Government of India", logo: logoMhrd },
 ];
 
 const ClientsSection = () => {
