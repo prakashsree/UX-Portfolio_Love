@@ -9,6 +9,7 @@ import CaseStudyDeviceSetup from "./pages/CaseStudyDeviceSetup";
 import CaseStudyBcspServices from "./pages/CaseStudyBcspServices";
 import CaseStudyPocRfp from "./pages/CaseStudyPocRfp";
 import NotFound from "./pages/NotFound";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
