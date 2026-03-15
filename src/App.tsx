@@ -9,6 +9,7 @@ import CaseStudyDeviceSetup from "./pages/CaseStudyDeviceSetup";
 import CaseStudyBcspServices from "./pages/CaseStudyBcspServices";
 import CaseStudyPocRfp from "./pages/CaseStudyPocRfp";
 import NotFound from "./pages/NotFound";
+import { ScrollToTop } from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -18,6 +19,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/case-study/universal-cart" element={<CaseStudyUniversalCart />} />
