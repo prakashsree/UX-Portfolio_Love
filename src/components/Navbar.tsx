@@ -13,9 +13,7 @@ const workDropdownItems = [
 
 const navItems = [
   { label: "Work", href: "#work", hasDropdown: true },
-  { label: "Process", href: "#process" },
   { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
   { label: "Resume", href: "https://drive.google.com/file/d/1ldSg81ALOeXzu7wxTuhItByogcA-nBWo/view?usp=drive_link", external: true },
 ];
 
