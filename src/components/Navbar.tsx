@@ -16,7 +16,7 @@ const navItems = [
   { label: "Process", href: "#process" },
   { label: "About", href: "#about" },
   { label: "Skills", href: "#skills" },
-  { label: "Resume", href: "https://drive.google.com/file/d/1HtVmZxA8GTUJqf6HT96cMXNXitc5B8f4/view?usp=drive_link", external: true },
+  { label: "Resume", href: "https://drive.google.com/file/d/1ldSg81ALOeXzu7wxTuhItByogcA-nBWo/view?usp=drive_link", external: true },
 ];
 
 const Navbar = () => {
