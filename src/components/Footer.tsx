@@ -4,7 +4,6 @@ interface WeatherData {
   tempC: number;
   tempF: number;
   city: string;
-  condition: string;
 }
 
 const getGreeting = (tempC: number): string => {
@@ -33,7 +32,6 @@ const Footer = () => {
             tempC: parseInt(current.temp_C),
             tempF: parseInt(current.temp_F),
             city: area.areaName?.[0]?.value || "Unknown",
-            condition: current.weatherDesc?.[0]?.value || "",
           });
         }
       } catch {
@@ -46,20 +44,21 @@ const Footer = () => {
   return (
     <footer className="border-t border-border bg-card py-8">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-6 sm:flex-row">
-        <p className="font-body text-sm text-muted-foreground">
-          © {new Date().getFullYear()} Prakash S. Designed with care.
-        </p>
+        <div className="flex flex-wrap items-center gap-x-3 gap-y-1 font-body text-sm text-muted-foreground">
+          <span>© {new Date().getFullYear()} Prakash S. Designed with care.</span>
+          {weather && (
+            <>
+              <span className="text-muted-foreground/40">·</span>
+              <span className="text-xs text-muted-foreground/70">
+                {weather.tempC}°C / {weather.tempF}°F · {weather.city} — {getGreeting(weather.tempC)}
+              </span>
+            </>
+          )}
+        </div>
         <p className="font-body text-xs text-muted-foreground/60">
           Portfolio contents are for demonstration purposes only.
         </p>
       </div>
-      {weather && (
-        <div className="container mx-auto mt-4 border-t border-border pt-4 px-6">
-          <p className="font-body text-xs text-muted-foreground/70 text-center">
-            {weather.tempC}°C / {weather.tempF}°F · {weather.city} — {getGreeting(weather.tempC)}
-          </p>
-        </div>
-      )}
     </footer>
   );
 };
