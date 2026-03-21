@@ -43,6 +43,9 @@ const CaseStudyBcspServices = () => {
                 <div><span className="font-semibold text-foreground">Type:</span> Individual Contributor</div>
                 <div><span className="font-semibold text-foreground">Methods:</span> User Research, Surveys, Heuristic Evaluation, Prototyping</div>
               </div>
+              <p className="mt-3 font-body text-sm font-semibold text-muted-foreground">
+                Full case studies upon request
+              </p>
             </motion.div>
           </div>
         </section>

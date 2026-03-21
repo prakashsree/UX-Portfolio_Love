@@ -120,6 +120,9 @@ const CaseStudyPocRfp = () => {
                 <div><span className="font-semibold text-foreground">Type:</span> Proof of Concept</div>
                 <div><span className="font-semibold text-foreground">Methods:</span> Wireframing, Prototyping, UX Strategy</div>
               </div>
+              <p className="mt-3 font-body text-sm font-semibold text-muted-foreground">
+                Full case studies upon request
+              </p>
             </motion.div>
           </div>
         </section>
