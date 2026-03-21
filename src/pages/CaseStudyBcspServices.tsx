@@ -21,14 +21,14 @@ const CaseStudyBcspServices = () => {
           <div className="container mx-auto px-6">
             <Link
               to="/"
-              className="mb-8 inline-flex items-center gap-2 font-body text-sm text-muted-foreground transition-colors hover:text-primary"
-            >
+              className="mb-8 inline-flex items-center gap-2 font-body text-sm text-muted-foreground transition-colors hover:text-primary">
+              
               <ArrowLeft className="h-4 w-4" /> Back to Home
             </Link>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
+              animate={{ opacity: 1, y: 0 }}>
+              
               <p className="mb-2 font-body text-sm font-medium uppercase tracking-wider text-primary">
                 Communications & Technology
               </p>
@@ -43,7 +43,7 @@ const CaseStudyBcspServices = () => {
                 <div><span className="font-semibold text-foreground">Type:</span> Individual Contributor</div>
                 <div><span className="font-semibold text-foreground">Methods:</span> User Research, Surveys, Heuristic Evaluation, Prototyping</div>
               </div>
-              <p className="mt-3 font-body text-sm font-semibold text-muted-foreground">
+              <p className="mt-3 font-body text-sm font-semibold text-destructive">
                 Full case studies upon request
               </p>
             </motion.div>
@@ -68,15 +68,15 @@ const CaseStudyBcspServices = () => {
             <p className="mt-3">The goal was to analyze various usage feedback from end users of the respective services and to understand:</p>
             <div className="mt-4 grid gap-3 sm:grid-cols-3">
               {[
-                { icon: <CheckCircle className="h-5 w-5 text-primary" />, label: "Highlights", desc: "Good points impacting users daily work value" },
-                { icon: <Search className="h-5 w-5 text-destructive" />, label: "Opportunities", desc: "Pain points impacting users output" },
-                { icon: <Lightbulb className="h-5 w-5 text-yellow-500" />, label: "Recommended Actions", desc: "Suggestions helpful for UX improvement" },
-              ].map((item) => (
-                <div key={item.label} className="rounded-lg border border-border bg-card p-4">
+              { icon: <CheckCircle className="h-5 w-5 text-primary" />, label: "Highlights", desc: "Good points impacting users daily work value" },
+              { icon: <Search className="h-5 w-5 text-destructive" />, label: "Opportunities", desc: "Pain points impacting users output" },
+              { icon: <Lightbulb className="h-5 w-5 text-yellow-500" />, label: "Recommended Actions", desc: "Suggestions helpful for UX improvement" }].
+              map((item) =>
+              <div key={item.label} className="rounded-lg border border-border bg-card p-4">
                   <p className="flex items-center gap-2 font-display text-sm font-bold text-foreground">{item.icon}{item.label}</p>
                   <p className="mt-1 text-xs text-muted-foreground">{item.desc}</p>
                 </div>
-              ))}
+              )}
             </div>
           </Section>
 
@@ -84,21 +84,21 @@ const CaseStudyBcspServices = () => {
           <Section title="2. What I Did">
             <div className="grid gap-3 sm:grid-cols-2">
               {[
-                "Setting goals and objectives",
-                "Stakeholder interviews",
-                "Understanding key audiences",
-                "Understanding existing flow",
-                "Guiding questions for user interviews",
-                "Survey",
-                "Usability/Heuristic Evaluation",
-                "Recommendation reports",
-                "Low/medium-fidelity prototypes",
-              ].map((item) => (
-                <div key={item} className="flex items-center gap-2 rounded-lg bg-secondary/30 p-3 text-sm text-foreground">
+              "Setting goals and objectives",
+              "Stakeholder interviews",
+              "Understanding key audiences",
+              "Understanding existing flow",
+              "Guiding questions for user interviews",
+              "Survey",
+              "Usability/Heuristic Evaluation",
+              "Recommendation reports",
+              "Low/medium-fidelity prototypes"].
+              map((item) =>
+              <div key={item} className="flex items-center gap-2 rounded-lg bg-secondary/30 p-3 text-sm text-foreground">
                   <CheckCircle className="h-4 w-4 shrink-0 text-primary" />
                   {item}
                 </div>
-              ))}
+              )}
             </div>
           </Section>
 
@@ -148,18 +148,18 @@ const CaseStudyBcspServices = () => {
           <Section title="8. Solutions">
             <div className="grid gap-4 sm:grid-cols-2">
               {[
-                { icon: <CheckCircle className="h-5 w-5 text-primary" />, title: "Streamlined Success Path", desc: "Avoidance of wrong paths and excessive effort" },
-                { icon: <Search className="h-5 w-5 text-primary" />, title: "Error Minimization", desc: "Simplification, clarity & proactive error prevention" },
-                { icon: <Users className="h-5 w-5 text-primary" />, title: "User Satisfaction", desc: "Align design with user needs & ensure goals are accomplished easily" },
-                { icon: <BarChart3 className="h-5 w-5 text-primary" />, title: "Promote Valuable Features", desc: "Use design to emphasize, prioritize, steer users to desired features" },
-                { icon: <MessageSquare className="h-5 w-5 text-primary" />, title: "Engagement", desc: "Getting users to use the system regularly" },
-              ].map((s) => (
-                <div key={s.title} className="rounded-lg border border-border bg-card p-5">
+              { icon: <CheckCircle className="h-5 w-5 text-primary" />, title: "Streamlined Success Path", desc: "Avoidance of wrong paths and excessive effort" },
+              { icon: <Search className="h-5 w-5 text-primary" />, title: "Error Minimization", desc: "Simplification, clarity & proactive error prevention" },
+              { icon: <Users className="h-5 w-5 text-primary" />, title: "User Satisfaction", desc: "Align design with user needs & ensure goals are accomplished easily" },
+              { icon: <BarChart3 className="h-5 w-5 text-primary" />, title: "Promote Valuable Features", desc: "Use design to emphasize, prioritize, steer users to desired features" },
+              { icon: <MessageSquare className="h-5 w-5 text-primary" />, title: "Engagement", desc: "Getting users to use the system regularly" }].
+              map((s) =>
+              <div key={s.title} className="rounded-lg border border-border bg-card p-5">
                   {s.icon}
                   <p className="mt-3 font-display text-sm font-bold text-foreground">{s.title}</p>
                   <p className="mt-1 text-xs text-muted-foreground">{s.desc}</p>
                 </div>
-              ))}
+              )}
             </div>
           </Section>
 
@@ -176,35 +176,35 @@ const CaseStudyBcspServices = () => {
           <Section title="10. Lessons Learned">
             <div className="space-y-4">
               {[
-                { title: "Collaboration", desc: "From the earliest stage of a project, involve key stakeholders and any other team members who will be involved. This will help you come up with more solid solutions and make everyone feel ownership of the design choices." },
-                { title: "Be Open to Criticism", desc: "We are not designing for ourselves. It's very important to show what we design to other designers, developers, and potential or real users. Making a good experience for a product is a multidisciplinary effort." },
-                { title: "Avoid Being Defensive", desc: "Critical feedback is an opportunity to see the work from a different perspective and learn from it. Try not to take it as an attack on you as a designer. It's ok to explain the approach, but acting defensively will make the critiquer avoid further discussions." },
-                { title: "Chatbots", desc: "The user can talk about anything anytime. We as a UX team needed to prepare our bot for all scenarios. The way of documenting and thinking about user flows is very different from building a screen-to-screen interface." },
-              ].map((l) => (
-                <div key={l.title} className="rounded-lg border border-border bg-card p-5">
+              { title: "Collaboration", desc: "From the earliest stage of a project, involve key stakeholders and any other team members who will be involved. This will help you come up with more solid solutions and make everyone feel ownership of the design choices." },
+              { title: "Be Open to Criticism", desc: "We are not designing for ourselves. It's very important to show what we design to other designers, developers, and potential or real users. Making a good experience for a product is a multidisciplinary effort." },
+              { title: "Avoid Being Defensive", desc: "Critical feedback is an opportunity to see the work from a different perspective and learn from it. Try not to take it as an attack on you as a designer. It's ok to explain the approach, but acting defensively will make the critiquer avoid further discussions." },
+              { title: "Chatbots", desc: "The user can talk about anything anytime. We as a UX team needed to prepare our bot for all scenarios. The way of documenting and thinking about user flows is very different from building a screen-to-screen interface." }].
+              map((l) =>
+              <div key={l.title} className="rounded-lg border border-border bg-card p-5">
                   <p className="font-display text-sm font-bold text-foreground">{l.title}</p>
                   <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{l.desc}</p>
                 </div>
-              ))}
+              )}
             </div>
           </Section>
         </div>
       </main>
       <Footer />
-    </>
-  );
+    </>);
+
 };
 
-const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    className="mb-12"
-  >
+const Section = ({ title, children }: {title: string;children: React.ReactNode;}) =>
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  className="mb-12">
+  
     <h2 className="mb-4 font-display text-2xl font-bold text-foreground">{title}</h2>
     <div className="font-body text-sm leading-relaxed text-muted-foreground">{children}</div>
-  </motion.div>
-);
+  </motion.div>;
+
 
 export default CaseStudyBcspServices;
