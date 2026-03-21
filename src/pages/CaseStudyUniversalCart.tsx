@@ -44,6 +44,9 @@ const UniversalCartCaseStudy = () => {
                 <div><span className="font-semibold text-foreground">Type:</span> Individual Contributor</div>
                 <div><span className="font-semibold text-foreground">Methods:</span>Methods: Research, Design Thinking, Low/High Fidelity Prototyping, Spot Testing Ambassador</div>
               </div>
+              <p className="mt-3 font-body text-sm font-semibold text-muted-foreground">
+                Full case studies upon request
+              </p>
             </motion.div>
           </div>
         </section>
