@@ -7,51 +7,51 @@ import bcspImg from "@/assets/case-bcsp-services.jpg";
 import pocImg from "@/assets/case-poc-rfp.jpg";
 
 const projects = [
-  {
-    id: "universal-cart",
-    title: "Universal Cart & Quote Experience",
-    subtitle: "Communications & Technology",
-    description:
-      "Redesigned the cross-channel cart and quote system for a global telecom leader, reducing cart abandonment and enabling seamless quote-to-cart conversion across devices and channels.",
-    role: "Sr UX Designer",
-    tags: ["Research", "Design Thinking", "Prototyping", "Usability Testing"],
-    image: cartImg,
-    link: "/case-study/universal-cart",
-  },
-  {
-    id: "device-setup",
-    title: "Device Setup Experience",
-    subtitle: "Communications & Technology",
-    description:
-      "Created a unified, easy-to-follow device setup experience that centralizes all setup assets and increases adoption of tech support offerings.",
-    role: "Lead Designer",
-    tags: ["UX Design", "Information Architecture", "User Flows"],
-    image: deviceImg,
-    link: "/case-study/device-setup",
-  },
-  {
-    id: "bcsp-services",
-    title: "BCSP Services",
-    subtitle: "Communications & Technology",
-    description:
-      "Discovered service offerings within BCSP and provided UX feedback through surveys, heuristic evaluations, and chatbot design to improve user experience.",
-    role: "UX Designer",
-    tags: ["User Research", "Surveys", "Heuristic Evaluation", "Chatbots"],
-    image: bcspImg,
-    link: "/case-study/bcsp-services",
-  },
-  {
-    id: "poc-rfp",
-    title: "Proof of Concept / RFP",
-    subtitle: "Multi-Industry",
-    description:
-      "Design proposals for a Restaurant iOS app, Telecom dashboard, and Vehicle service contracts — verifying concepts with wireframes and UX strategy.",
-    role: "UX Designer",
-    tags: ["Wireframing", "Prototyping", "UX Strategy", "POC"],
-    image: pocImg,
-    link: "/case-study/poc-rfp",
-  },
-];
+{
+  id: "universal-cart",
+  title: "Universal Cart & Quote Experience",
+  subtitle: "Communications & Technology",
+  description:
+  "Redesigned the cross-channel cart and quote system for a global telecom leader, reducing cart abandonment and enabling seamless quote-to-cart conversion across devices and channels.",
+  role: "Sr UX Designer",
+  tags: ["Research", "Design Thinking", "Prototyping", "Usability Testing"],
+  image: cartImg,
+  link: "/case-study/universal-cart"
+},
+{
+  id: "device-setup",
+  title: "Device Setup Experience",
+  subtitle: "Communications & Technology",
+  description:
+  "Created a unified, easy-to-follow device setup experience that centralizes all setup assets and increases adoption of tech support offerings.",
+  role: "Lead Designer",
+  tags: ["UX Design", "Information Architecture", "User Flows"],
+  image: deviceImg,
+  link: "/case-study/device-setup"
+},
+{
+  id: "bcsp-services",
+  title: "BCSP Services",
+  subtitle: "Communications & Technology",
+  description:
+  "Discovered service offerings within BCSP and provided UX feedback through surveys, heuristic evaluations, and chatbot design to improve user experience.",
+  role: "UX Designer",
+  tags: ["User Research", "Surveys", "Heuristic Evaluation", "Chatbots"],
+  image: bcspImg,
+  link: "/case-study/bcsp-services"
+},
+{
+  id: "poc-rfp",
+  title: "Proof of Concept / RFP",
+  subtitle: "Multi-Industry",
+  description:
+  "Design proposals for a Restaurant iOS app, Telecom dashboard, and Vehicle service contracts — verifying concepts with wireframes and UX strategy.",
+  role: "UX Designer",
+  tags: ["Wireframing", "Prototyping", "UX Strategy", "POC"],
+  image: pocImg,
+  link: "/case-study/poc-rfp"
+}];
+
 
 const WorkSection = () => {
   return (
@@ -61,38 +61,38 @@ const WorkSection = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="mb-16 text-center"
-        >
+          className="mb-16 text-center">
+          
           <h2 className="mb-4 font-display text-3xl font-bold text-foreground sm:text-4xl">
             Selected Work
           </h2>
           <p className="mx-auto max-w-md font-body text-muted-foreground">
             A few projects I'm proud of — from research to shipped product.
           </p>
-          <p className="mt-2 font-body text-sm font-semibold text-muted-foreground">
+          <p className="mt-2 font-body text-sm font-semibold text-destructive">
             Full case studies upon request
           </p>
         </motion.div>
 
         <div className="grid gap-8 md:grid-cols-2">
-          {projects.map((project, i) => (
-            <motion.div
-              key={project.id}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.15 }}
-            >
+          {projects.map((project, i) =>
+          <motion.div
+            key={project.id}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.15 }}>
+            
               <Link
-                to={project.link}
-                className="group block overflow-hidden rounded-xl border border-border bg-card shadow-card transition-all hover:shadow-card-hover"
-              >
+              to={project.link}
+              className="group block overflow-hidden rounded-xl border border-border bg-card shadow-card transition-all hover:shadow-card-hover">
+              
                 <div className="relative aspect-[16/10] overflow-hidden">
                   <img
-                    src={project.image}
-                    alt={project.title}
-                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                  />
+                  src={project.image}
+                  alt={project.title}
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+                
                   <div className="absolute inset-0 bg-gradient-to-t from-card/80 to-transparent" />
                 </div>
                 <div className="p-6">
@@ -107,23 +107,23 @@ const WorkSection = () => {
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-2">
-                    {project.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="rounded-md bg-secondary px-2 py-1 font-body text-xs text-secondary-foreground"
-                      >
+                    {project.tags.map((tag) =>
+                  <span
+                    key={tag}
+                    className="rounded-md bg-secondary px-2 py-1 font-body text-xs text-secondary-foreground">
+                    
                         {tag}
                       </span>
-                    ))}
+                  )}
                   </div>
                 </div>
               </Link>
             </motion.div>
-          ))}
+          )}
         </div>
       </div>
-    </section>
-  );
+    </section>);
+
 };
 
 export default WorkSection;
