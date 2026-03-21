@@ -69,6 +69,9 @@ const WorkSection = () => {
           <p className="mx-auto max-w-md font-body text-muted-foreground">
             A few projects I'm proud of — from research to shipped product.
           </p>
+          <p className="mt-2 font-body text-sm font-semibold text-muted-foreground">
+            Full case studies upon request
+          </p>
         </motion.div>
 
         <div className="grid gap-8 md:grid-cols-2">
