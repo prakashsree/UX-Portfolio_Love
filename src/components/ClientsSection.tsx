@@ -1,51 +1,45 @@
-import { motion } from "framer-motion";
 import logoCisco from "@/assets/logo-cisco.png";
 import logoVerizon from "@/assets/logo-verizon.png";
 import logoHuawei from "@/assets/logo-huawei.png";
-import logoHmshost from "@/assets/logo-hmshost.png";
-import logoMasterbrands from "@/assets/logo-masterbrands.png";
 import logoMhrd from "@/assets/logo-mhrd.png";
+import logoTelefonica from "@/assets/logo-telefonica.png";
 
 const clients = [
   { name: "Cisco", logo: logoCisco },
   { name: "Verizon", logo: logoVerizon },
   { name: "Huawei", logo: logoHuawei },
-  { name: "HMS Host", logo: logoHmshost },
-  { name: "Masterbrands Cabinet", logo: logoMasterbrands },
+  { name: "Telefonica", logo: logoTelefonica },
   { name: "MHRD, Government of India", logo: logoMhrd },
 ];
 
 const ClientsSection = () => {
   return (
-    <section className="border-b border-border bg-card py-12">
+    <section className="border-b border-border bg-card py-12 overflow-hidden">
       <div className="container mx-auto px-6">
-        <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          className="mb-8 text-center font-body text-sm uppercase tracking-widest text-muted-foreground"
-        >
+        <p className="mb-8 text-center font-body text-sm uppercase tracking-widest text-muted-foreground">
           Trusted by teams at
-        </motion.p>
-        <div className="flex flex-wrap items-center justify-center gap-10 md:gap-16">
-          {clients.map((client, i) => (
-            <motion.div
-              key={client.name}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
-              className="group flex flex-col items-center gap-3 transition-colors"
+        </p>
+      </div>
+      <div className="relative w-full">
+        {/* Fade edges */}
+        <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-card to-transparent" />
+        <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-card to-transparent" />
+
+        <div className="flex animate-marquee items-center gap-16">
+          {[...clients, ...clients, ...clients, ...clients].map((client, i) => (
+            <div
+              key={`${client.name}-${i}`}
+              className="group flex shrink-0 flex-col items-center gap-3"
             >
               <img
                 src={client.logo}
                 alt={`${client.name} logo`}
-                className="h-20 w-auto object-contain opacity-70 grayscale transition-all group-hover:opacity-100 group-hover:grayscale-0"
+                className="h-16 w-auto object-contain opacity-60 grayscale transition-all group-hover:opacity-100 group-hover:grayscale-0"
               />
-              <span className="font-body text-sm font-medium text-muted-foreground/70 transition-colors group-hover:text-primary">
+              <span className="whitespace-nowrap font-body text-sm font-medium text-muted-foreground/70 transition-colors group-hover:text-primary">
                 {client.name}
               </span>
-            </motion.div>
+            </div>
           ))}
         </div>
       </div>
