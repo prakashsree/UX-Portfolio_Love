@@ -22,14 +22,14 @@ const DeviceSetupCaseStudy = () => {
           <div className="container mx-auto px-6">
             <Link
               to="/"
-              className="mb-8 inline-flex items-center gap-2 font-body text-sm text-muted-foreground transition-colors hover:text-primary"
-            >
+              className="mb-8 inline-flex items-center gap-2 font-body text-sm text-muted-foreground transition-colors hover:text-primary">
+              
               <ArrowLeft className="h-4 w-4" /> Back to Home
             </Link>
             <motion.div
               initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-            >
+              animate={{ opacity: 1, y: 0 }}>
+              
               <p className="mb-2 font-body text-sm font-medium uppercase tracking-wider text-primary">
                 Communications & Technology
               </p>
@@ -44,7 +44,7 @@ const DeviceSetupCaseStudy = () => {
                 <div><span className="font-semibold text-foreground">Type:</span> Individual Contributor</div>
                 <div><span className="font-semibold text-foreground">Task:</span> Research, Design Thinking, Low/Hi-Fidelity Prototypes</div>
               </div>
-              <p className="mt-3 font-body text-sm font-semibold text-muted-foreground">
+              <p className="mt-3 font-body text-sm font-semibold text-destructive">
                 Full case studies upon request
               </p>
             </motion.div>
@@ -74,16 +74,16 @@ const DeviceSetupCaseStudy = () => {
             </div>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {[
-                { icon: <Phone className="h-5 w-5" />, label: "Reduce ND-CIR", desc: "Reduce New Device Calling-in Rate related to Setup/Activation" },
-                { icon: <Target className="h-5 w-5" />, label: "One Place To Go", desc: "Easily access all assets and offerings that help with device setup" },
-                { icon: <Headphones className="h-5 w-5" />, label: "Tech Coach Adoption", desc: "Increase adoption of Tech Coach offerings via OPTG" },
-                { icon: <Zap className="h-5 w-5" />, label: "Intelligent Assistance", desc: "Expand and accommodate opportunities with intelligent setup assistance options" },
-              ].map((obj) => (
-                <div key={obj.label} className="rounded-lg border border-border bg-card p-4">
+              { icon: <Phone className="h-5 w-5" />, label: "Reduce ND-CIR", desc: "Reduce New Device Calling-in Rate related to Setup/Activation" },
+              { icon: <Target className="h-5 w-5" />, label: "One Place To Go", desc: "Easily access all assets and offerings that help with device setup" },
+              { icon: <Headphones className="h-5 w-5" />, label: "Tech Coach Adoption", desc: "Increase adoption of Tech Coach offerings via OPTG" },
+              { icon: <Zap className="h-5 w-5" />, label: "Intelligent Assistance", desc: "Expand and accommodate opportunities with intelligent setup assistance options" }].
+              map((obj) =>
+              <div key={obj.label} className="rounded-lg border border-border bg-card p-4">
                   <p className="flex items-center gap-2 font-display text-sm font-bold text-foreground">{obj.icon}{obj.label}</p>
                   <p className="mt-1 text-xs text-muted-foreground">{obj.desc}</p>
                 </div>
-              ))}
+              )}
             </div>
           </Section>
 
@@ -91,15 +91,15 @@ const DeviceSetupCaseStudy = () => {
           <Section title="Key Metrics">
             <div className="grid gap-4 sm:grid-cols-3">
               {[
-                { metric: "122K/mo", label: "Activation failures" },
-                { metric: "35%", label: "Calls related to activation & setup" },
-                { metric: "11%", label: "Increase digital engagement target" },
-              ].map((m) => (
-                <div key={m.label} className="rounded-lg border border-border bg-secondary/30 p-4 text-center">
+              { metric: "122K/mo", label: "Activation failures" },
+              { metric: "35%", label: "Calls related to activation & setup" },
+              { metric: "11%", label: "Increase digital engagement target" }].
+              map((m) =>
+              <div key={m.label} className="rounded-lg border border-border bg-secondary/30 p-4 text-center">
                   <p className="font-display text-2xl font-bold text-primary">{m.metric}</p>
                   <p className="text-sm">{m.label}</p>
                 </div>
-              ))}
+              )}
             </div>
             <p className="mt-4 rounded-md border-l-4 border-primary bg-secondary/50 p-4 text-sm font-semibold text-foreground">Goal: Decrease post-sale transaction time from 21 minutes to 18 minutes by offering alternative setup options.</p>
           </Section>
@@ -109,20 +109,20 @@ const DeviceSetupCaseStudy = () => {
             <p>Followed the Double Diamond structure to understand customers and their problems and explore innovative ways to solve them. Approached problems and solutions by using Divergent (Broad & Open mind) & Convergent Thinking (Narrow down & one or more key problems and solutions).</p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { phase: "Discover", items: ["User Interviews", "Heuristic Evaluation", "Competitive Analysis"] },
-                { phase: "Define", items: ["Personas", "Problem Statement", "User Journey Mapping"] },
-                { phase: "Ideate", items: ["DT Workshops", "Concept Sketches", "Low-fi Wireframes"] },
-                { phase: "Prototype & Implement", items: ["Hi-fi Mockups", "Usability Testing", "Final Handoff"] },
-              ].map((p) => (
-                <div key={p.phase} className="rounded-lg border border-border bg-card p-4">
+              { phase: "Discover", items: ["User Interviews", "Heuristic Evaluation", "Competitive Analysis"] },
+              { phase: "Define", items: ["Personas", "Problem Statement", "User Journey Mapping"] },
+              { phase: "Ideate", items: ["DT Workshops", "Concept Sketches", "Low-fi Wireframes"] },
+              { phase: "Prototype & Implement", items: ["Hi-fi Mockups", "Usability Testing", "Final Handoff"] }].
+              map((p) =>
+              <div key={p.phase} className="rounded-lg border border-border bg-card p-4">
                   <p className="mb-2 font-display text-sm font-bold text-primary">{p.phase}</p>
                   <ul className="space-y-1 text-xs text-muted-foreground">
-                    {p.items.map((item) => (
-                      <li key={item}>• {item}</li>
-                    ))}
+                    {p.items.map((item) =>
+                  <li key={item}>• {item}</li>
+                  )}
                   </ul>
                 </div>
-              ))}
+              )}
             </div>
           </Section>
 
@@ -131,16 +131,16 @@ const DeviceSetupCaseStudy = () => {
             <p>I began by understanding the user pain points in the current device setup and content transfer process, along with identifying user needs and preferences for support options.</p>
             <div className="mt-6 grid gap-4 sm:grid-cols-3">
               {[
-                { icon: <Users className="h-6 w-6 text-primary" />, title: "User Interviews", desc: "Conducted with 15 users experiencing issues with device setup and content transfer via CMI Team." },
-                { icon: <Search className="h-6 w-6 text-primary" />, title: "Heuristic Evaluation", desc: "Audited existing experiences using Jakob Nielsen's 10 usability heuristics to identify design problems." },
-                { icon: <Lightbulb className="h-6 w-6 text-primary" />, title: "Competitive Analysis", desc: "Reviewed AT&T, T-Mobile, and Verizon solutions to identify gaps and opportunities in the market." },
-              ].map((m) => (
-                <div key={m.title} className="rounded-lg border border-border bg-card p-5">
+              { icon: <Users className="h-6 w-6 text-primary" />, title: "User Interviews", desc: "Conducted with 15 users experiencing issues with device setup and content transfer via CMI Team." },
+              { icon: <Search className="h-6 w-6 text-primary" />, title: "Heuristic Evaluation", desc: "Audited existing experiences using Jakob Nielsen's 10 usability heuristics to identify design problems." },
+              { icon: <Lightbulb className="h-6 w-6 text-primary" />, title: "Competitive Analysis", desc: "Reviewed AT&T, T-Mobile, and Verizon solutions to identify gaps and opportunities in the market." }].
+              map((m) =>
+              <div key={m.title} className="rounded-lg border border-border bg-card p-5">
                   {m.icon}
                   <p className="mt-3 font-display text-sm font-bold text-foreground">{m.title}</p>
                   <p className="mt-1 text-xs text-muted-foreground">{m.desc}</p>
                 </div>
-              ))}
+              )}
             </div>
           </Section>
 
@@ -190,11 +190,11 @@ const DeviceSetupCaseStudy = () => {
             <h3 className="mb-3 font-display text-lg font-bold text-foreground">Key Findings (Severity Rated)</h3>
             <div className="space-y-4">
               {[
-                { title: "User Control & Freedom", severity: "4", desc: "No option for lost device, BYOD, or custom setup scenarios.", rec: "Add a section to ask users their scenario and show content accordingly." },
-                { title: "Consistency & Standards", severity: "3", desc: "Two primary CTAs on the banner — not standard practice.", rec: "'Get Started' should be filled (primary) and 'Watch Video' outlined (secondary)." },
-                { title: "Flexibility & Efficiency", severity: "4", desc: "Design favors novice users; 'Let's go' CTA is pushed to the bottom.", rec: "'Let's get started' section should be moved to the first fold." },
-              ].map((h) => (
-                <div key={h.title} className="rounded-lg border border-border bg-card p-5">
+              { title: "User Control & Freedom", severity: "4", desc: "No option for lost device, BYOD, or custom setup scenarios.", rec: "Add a section to ask users their scenario and show content accordingly." },
+              { title: "Consistency & Standards", severity: "3", desc: "Two primary CTAs on the banner — not standard practice.", rec: "'Get Started' should be filled (primary) and 'Watch Video' outlined (secondary)." },
+              { title: "Flexibility & Efficiency", severity: "4", desc: "Design favors novice users; 'Let's go' CTA is pushed to the bottom.", rec: "'Let's get started' section should be moved to the first fold." }].
+              map((h) =>
+              <div key={h.title} className="rounded-lg border border-border bg-card p-5">
                   <div className="flex items-center justify-between">
                     <p className="font-display text-sm font-bold text-foreground">{h.title}</p>
                     <span className={`rounded-full px-3 py-0.5 text-xs font-bold ${h.severity === "4" ? "bg-destructive/10 text-destructive" : "bg-yellow-500/10 text-yellow-600"}`}>
@@ -204,7 +204,7 @@ const DeviceSetupCaseStudy = () => {
                   <p className="mt-2 text-sm text-muted-foreground">{h.desc}</p>
                   <p className="mt-2 text-sm font-medium text-foreground">→ {h.rec}</p>
                 </div>
-              ))}
+              )}
             </div>
 
             <h3 className="mb-3 mt-8 font-display text-lg font-bold text-foreground">Final Thoughts from Evaluation</h3>
@@ -237,14 +237,14 @@ const DeviceSetupCaseStudy = () => {
             <h3 className="mb-3 mt-6 font-display text-lg font-bold text-foreground">Pain Points & Opportunities</h3>
             <div className="space-y-3">
               {[
-                { pain: "Power On Activation can fail, generating a call to Care", opp: "Proactive identification of failure and provide personalized assistance" },
-                { pain: "Customers may not remember their PIN", opp: "Enable link to reset PIN online to continue with Activation" },
-                { pain: "FMi can prevent device activation and generate a call to Care", opp: "Track FMi Status. Communicate user to deactivate with steps" },
-                { pain: "No backup reminder sent while new device is in transit", opp: "Before delivery, communicate backup reminder with a link to Tech Coach" },
-                { pain: "Lack of confidence in self-serve", opp: "Keep highlighting Tech Coach benefits and multitude of support options" },
-                { pain: "Customer doesn't remember individual account logins", opp: "Tech Coach guide instructions to recover account logins" },
-              ].map((row, i) => (
-                <div key={i} className="grid gap-3 md:grid-cols-2">
+              { pain: "Power On Activation can fail, generating a call to Care", opp: "Proactive identification of failure and provide personalized assistance" },
+              { pain: "Customers may not remember their PIN", opp: "Enable link to reset PIN online to continue with Activation" },
+              { pain: "FMi can prevent device activation and generate a call to Care", opp: "Track FMi Status. Communicate user to deactivate with steps" },
+              { pain: "No backup reminder sent while new device is in transit", opp: "Before delivery, communicate backup reminder with a link to Tech Coach" },
+              { pain: "Lack of confidence in self-serve", opp: "Keep highlighting Tech Coach benefits and multitude of support options" },
+              { pain: "Customer doesn't remember individual account logins", opp: "Tech Coach guide instructions to recover account logins" }].
+              map((row, i) =>
+              <div key={i} className="grid gap-3 md:grid-cols-2">
                   <div className="flex items-start gap-2 rounded-lg bg-destructive/5 p-3">
                     <span className="mt-0.5 text-destructive">✕</span>
                     <p className="text-sm text-muted-foreground">{row.pain}</p>
@@ -254,7 +254,7 @@ const DeviceSetupCaseStudy = () => {
                     <p className="text-sm text-muted-foreground">{row.opp}</p>
                   </div>
                 </div>
-              ))}
+              )}
             </div>
           </Section>
 
@@ -263,19 +263,19 @@ const DeviceSetupCaseStudy = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12"
-          >
+            className="mb-12">
+            
             <h2 className="mb-4 font-display text-2xl font-bold text-foreground">Customer Journey — Jonathan</h2>
             <div className="relative flex flex-col gap-0">
               {[
-                { stage: "Received Device", emotion: "😟 Anxious", desc: "Jonathan reads the leaflet but doesn't find enough info. Activation process failed.", color: "primary" as const },
-                { stage: "Called Support", emotion: "😤 Annoyed / Embarrassed", desc: "After a long call, it was a firewall issue. He couldn't recall his Verizon PIN.", color: "yellow" as const },
-                { stage: "Content Transfer", emotion: "😫 Frustrated", desc: "Contacts transferred but some photos didn't. He hadn't backed up his old iPad.", color: "destructive" as const },
-              ].map((s, i) => {
+              { stage: "Received Device", emotion: "😟 Anxious", desc: "Jonathan reads the leaflet but doesn't find enough info. Activation process failed.", color: "primary" as const },
+              { stage: "Called Support", emotion: "😤 Annoyed / Embarrassed", desc: "After a long call, it was a firewall issue. He couldn't recall his Verizon PIN.", color: "yellow" as const },
+              { stage: "Content Transfer", emotion: "😫 Frustrated", desc: "Contacts transferred but some photos didn't. He hadn't backed up his old iPad.", color: "destructive" as const }].
+              map((s, i) => {
                 const colorMap = {
                   primary: { bg: "bg-primary", border: "border-primary/30", text: "text-primary-foreground" },
                   yellow: { bg: "bg-yellow-500", border: "border-yellow-500/30", text: "text-white" },
-                  destructive: { bg: "bg-destructive", border: "border-destructive/30", text: "text-destructive-foreground" },
+                  destructive: { bg: "bg-destructive", border: "border-destructive/30", text: "text-destructive-foreground" }
                 };
                 const c = colorMap[s.color];
                 return (
@@ -290,8 +290,8 @@ const DeviceSetupCaseStudy = () => {
                         <p className="mt-1 text-sm text-muted-foreground">{s.desc}</p>
                       </div>
                     </div>
-                  </div>
-                );
+                  </div>);
+
               })}
             </div>
           </motion.div>
@@ -303,12 +303,12 @@ const DeviceSetupCaseStudy = () => {
 
             <h3 className="mb-3 mt-6 font-display text-lg font-bold text-foreground">Workshop Process</h3>
             <div className="space-y-2">
-              {["Key metrics review", "Summary of user research & problem statement", "Key use case / user flow", "Customer Journey walkthrough", "Competitor Analysis review", "Concept Sketches & 'How Might We' exercises"].map((item) => (
-                <div key={item} className="flex items-center gap-3 rounded-lg border border-border bg-card p-3">
+              {["Key metrics review", "Summary of user research & problem statement", "Key use case / user flow", "Customer Journey walkthrough", "Competitor Analysis review", "Concept Sketches & 'How Might We' exercises"].map((item) =>
+              <div key={item} className="flex items-center gap-3 rounded-lg border border-border bg-card p-3">
                   <CheckCircle className="h-4 w-4 shrink-0 text-primary" />
                   <p className="text-sm text-muted-foreground">{item}</p>
                 </div>
-              ))}
+              )}
             </div>
           </Section>
 
@@ -326,9 +326,9 @@ const DeviceSetupCaseStudy = () => {
                 <li><strong>Platforms:</strong> MVO; MVA</li>
               </ul>
               <div className="mt-4 flex flex-wrap gap-2">
-                {["Old & New device details", "Setup steps (pre/post delivery)", "Activation & FMI status", "OS-based backup steps", "Tech Coach support options", "Verizon Chatbot integration"].map((tag) => (
-                  <span key={tag} className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">{tag}</span>
-                ))}
+                {["Old & New device details", "Setup steps (pre/post delivery)", "Activation & FMI status", "OS-based backup steps", "Tech Coach support options", "Verizon Chatbot integration"].map((tag) =>
+                <span key={tag} className="rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary">{tag}</span>
+                )}
               </div>
             </div>
           </Section>
@@ -338,16 +338,16 @@ const DeviceSetupCaseStudy = () => {
             <p>The final design provided a personalized, dynamic landing page with device-specific setup instructions, real-time status tracking, and integrated support options.</p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {[
-                { icon: <Smartphone className="h-5 w-5 text-primary" />, title: "Personalized Setup", desc: "Shows old & new device details with setup steps based on pre/post delivery status." },
-                { icon: <Monitor className="h-5 w-5 text-primary" />, title: "Status Tracking", desc: "Displays Activation & FMI status with actionable steps to resolve issues." },
-                { icon: <Headphones className="h-5 w-5 text-primary" />, title: "Integrated Support", desc: "Tech Coach support based on subscription with Verizon Chatbot integration." },
-                { icon: <Shield className="h-5 w-5 text-primary" />, title: "Guided Experience", desc: "Step-by-step instructions for backup, transfer, and activation with clear progress." },
-              ].map((f) => (
-                <div key={f.title} className="rounded-lg border border-border bg-card p-5">
+              { icon: <Smartphone className="h-5 w-5 text-primary" />, title: "Personalized Setup", desc: "Shows old & new device details with setup steps based on pre/post delivery status." },
+              { icon: <Monitor className="h-5 w-5 text-primary" />, title: "Status Tracking", desc: "Displays Activation & FMI status with actionable steps to resolve issues." },
+              { icon: <Headphones className="h-5 w-5 text-primary" />, title: "Integrated Support", desc: "Tech Coach support based on subscription with Verizon Chatbot integration." },
+              { icon: <Shield className="h-5 w-5 text-primary" />, title: "Guided Experience", desc: "Step-by-step instructions for backup, transfer, and activation with clear progress." }].
+              map((f) =>
+              <div key={f.title} className="rounded-lg border border-border bg-card p-5">
                   <p className="flex items-center gap-2 font-display text-sm font-bold text-foreground">{f.icon}{f.title}</p>
                   <p className="mt-2 text-sm text-muted-foreground">{f.desc}</p>
                 </div>
-              ))}
+              )}
             </div>
             <img src={solutionDeviceSetupImg} alt="Device setup solution screens showing Getting Started and New Device Guide" className="mt-6 w-full rounded-lg" />
           </Section>
@@ -358,26 +358,26 @@ const DeviceSetupCaseStudy = () => {
 
             <h3 className="mb-3 mt-6 font-display text-lg font-bold text-foreground">Research Methodology</h3>
             <div className="space-y-2">
-              {["Age 45+, Verizon customers and prospects", "Mix of incomes, ages, ethnicities & genders", "15 participants total", "Remote mixed-methods usability study", "Study took approximately 10 minutes", "Think-aloud protocol + click tests + questionnaire"].map((item) => (
-                <div key={item} className="flex items-center gap-3 rounded-lg border border-border bg-card p-3">
+              {["Age 45+, Verizon customers and prospects", "Mix of incomes, ages, ethnicities & genders", "15 participants total", "Remote mixed-methods usability study", "Study took approximately 10 minutes", "Think-aloud protocol + click tests + questionnaire"].map((item) =>
+              <div key={item} className="flex items-center gap-3 rounded-lg border border-border bg-card p-3">
                   <CheckCircle className="h-4 w-4 shrink-0 text-primary" />
                   <p className="text-sm text-muted-foreground">{item}</p>
                 </div>
-              ))}
+              )}
             </div>
 
             <h3 className="mb-3 mt-8 font-display text-lg font-bold text-foreground">Key Takeaways</h3>
             <div className="space-y-3">
               {[
-                "Overall, users found the 'Getting Started' device setup experience easy to understand, but adjustments to language and location of CTAs could make it even easier.",
-                "All users understood the 'Getting Started' page and most pointed out that it was a checklist as well.",
-                "Users were able to consistently find the 'Learn more' CTA between the two tasks. Instructional videos would also be beneficial.",
-              ].map((insight, i) => (
-                <div key={i} className="flex gap-4 rounded-lg border border-border bg-card p-4">
+              "Overall, users found the 'Getting Started' device setup experience easy to understand, but adjustments to language and location of CTAs could make it even easier.",
+              "All users understood the 'Getting Started' page and most pointed out that it was a checklist as well.",
+              "Users were able to consistently find the 'Learn more' CTA between the two tasks. Instructional videos would also be beneficial."].
+              map((insight, i) =>
+              <div key={i} className="flex gap-4 rounded-lg border border-border bg-card p-4">
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary font-display text-sm font-bold text-primary-foreground">{i + 1}</span>
                   <p className="text-sm text-muted-foreground">{insight}</p>
                 </div>
-              ))}
+              )}
             </div>
 
             <div className="mt-8 space-y-3 rounded-xl border border-border bg-secondary/30 p-6">
@@ -393,16 +393,16 @@ const DeviceSetupCaseStudy = () => {
           <Section title="9. Impact">
             <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
               {[
-                { metric: "232,813", label: "Page Visits" },
-                { metric: "04:25", label: "Avg Session Time" },
-                { metric: "14.3%", label: "Chat Sessions" },
-                { metric: "22%", label: "Bounce Rate" },
-              ].map((m) => (
-                <div key={m.label} className="rounded-lg border border-border bg-secondary/30 p-4 text-center">
+              { metric: "232,813", label: "Page Visits" },
+              { metric: "04:25", label: "Avg Session Time" },
+              { metric: "14.3%", label: "Chat Sessions" },
+              { metric: "22%", label: "Bounce Rate" }].
+              map((m) =>
+              <div key={m.label} className="rounded-lg border border-border bg-secondary/30 p-4 text-center">
                   <p className="font-display text-2xl font-bold text-primary">{m.metric}</p>
                   <p className="text-sm">{m.label}</p>
                 </div>
-              ))}
+              )}
             </div>
             <div className="mt-6 rounded-lg border border-border bg-card p-5">
               <h3 className="mb-2 font-display text-sm font-bold text-foreground">Most Clicked CTAs</h3>
@@ -429,20 +429,20 @@ const DeviceSetupCaseStudy = () => {
         </div>
       </main>
       <Footer />
-    </>
-  );
+    </>);
+
 };
 
-const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
-  <motion.div
-    initial={{ opacity: 0, y: 20 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    className="mb-12"
-  >
+const Section = ({ title, children }: {title: string;children: React.ReactNode;}) =>
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  className="mb-12">
+  
     <h2 className="mb-2 font-display text-2xl font-bold text-foreground">{title}</h2>
     <div className="space-y-2 font-body text-base leading-relaxed text-muted-foreground">{children}</div>
-  </motion.div>
-);
+  </motion.div>;
+
 
 export default DeviceSetupCaseStudy;
