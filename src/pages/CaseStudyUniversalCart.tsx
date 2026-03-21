@@ -44,7 +44,7 @@ const UniversalCartCaseStudy = () => {
                 <div><span className="font-semibold text-foreground">Type:</span> Individual Contributor</div>
                 <div><span className="font-semibold text-foreground">Methods:</span>Methods: Research, Design Thinking, Low/High Fidelity Prototyping, Spot Testing Ambassador</div>
               </div>
-              <p className="mt-3 font-body text-sm font-semibold text-muted-foreground">
+              <p className="mt-3 font-body text-sm font-semibold text-destructive">
                 Full case studies upon request
               </p>
             </motion.div>
@@ -171,8 +171,8 @@ const UniversalCartCaseStudy = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12"
-          >
+            className="mb-12">
+            
             <h2 className="mb-4 font-display text-2xl font-bold text-foreground">User Journey: .COM to .COM</h2>
             <div className="space-y-0">
               {/* Timeline */}
@@ -230,8 +230,8 @@ const UniversalCartCaseStudy = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12"
-          >
+            className="mb-12">
+            
             <h2 className="mb-4 font-display text-2xl font-bold text-foreground">User Journey: MVA to .COM</h2>
             <div className="relative flex flex-col gap-0">
               <div className="mb-2">
@@ -283,8 +283,8 @@ const UniversalCartCaseStudy = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12"
-          >
+            className="mb-12">
+            
             <h2 className="mb-4 font-display text-2xl font-bold text-foreground">User Journey: MVA to MVA</h2>
             <div className="relative flex flex-col gap-0">
               <div className="mb-2">
@@ -332,8 +332,8 @@ const UniversalCartCaseStudy = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="mb-12"
-          >
+            className="mb-12">
+            
             <h2 className="mb-4 font-display text-2xl font-bold text-foreground">User Journey: .COM to MVA</h2>
             <div className="relative flex flex-col gap-0">
               <div className="mb-2">
@@ -402,8 +402,8 @@ const UniversalCartCaseStudy = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
-                className="overflow-hidden rounded-xl border border-border shadow-md"
-              >
+                className="overflow-hidden rounded-xl border border-border shadow-md">
+                
                 <img src={multiQuoteImg} alt="Multi-Quote Comparison – side-by-side in-store vs online quote view" className="w-full" />
               </motion.div>
               <motion.div
@@ -411,8 +411,8 @@ const UniversalCartCaseStudy = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.15 }}
-                className="overflow-hidden rounded-xl border border-border shadow-md"
-              >
+                className="overflow-hidden rounded-xl border border-border shadow-md">
+                
                 <img src={smartConciergeImg} alt="Smart Concierge – review quote details with item breakdown" className="w-full" />
               </motion.div>
               <motion.div
@@ -420,8 +420,8 @@ const UniversalCartCaseStudy = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.3 }}
-                className="overflow-hidden rounded-xl border border-border shadow-md"
-              >
+                className="overflow-hidden rounded-xl border border-border shadow-md">
+                
                 <img src={successImg} alt="Smart Concierge – success confirmation and secure checkout redirect" className="w-full" />
               </motion.div>
             </div>
@@ -439,8 +439,8 @@ const UniversalCartCaseStudy = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="mt-8 overflow-hidden rounded-xl border border-border shadow-md"
-            >
+              className="mt-8 overflow-hidden rounded-xl border border-border shadow-md">
+              
               <img src={surveyImg} alt="Sample survey questions for Shared Cart tile feedback" className="w-full" />
             </motion.div>
           </Section>
@@ -477,8 +477,8 @@ const UniversalCartCaseStudy = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="overflow-hidden rounded-xl border border-border shadow-md"
-            >
+              className="overflow-hidden rounded-xl border border-border shadow-md">
+              
               <img src={appreciationImg} alt="Stakeholder appreciation email for Pause & Resume design contributions" className="w-full" />
             </motion.div>
           </Section>
@@ -489,8 +489,8 @@ const UniversalCartCaseStudy = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="overflow-hidden rounded-xl border border-border shadow-md"
-            >
+              className="overflow-hidden rounded-xl border border-border shadow-md">
+              
               <img src={awardsImg} alt="Bravo Award certificate awarded to Prakash Sundarraj by Tech Mahindra" className="w-full" />
             </motion.div>
           </Section>
