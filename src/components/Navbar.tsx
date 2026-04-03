@@ -14,6 +14,7 @@ const workDropdownItems = [
 const navItems = [
   { label: "Work", href: "#work", hasDropdown: true },
   { label: "About", href: "#about" },
+  { label: "Story", href: "/story", isRoute: true },
   { label: "Resume", href: "https://drive.google.com/file/d/1ldSg81ALOeXzu7wxTuhItByogcA-nBWo/view?usp=drive_link", external: true },
 ];
 
@@ -103,6 +104,14 @@ const Navbar = () => {
                   )}
                 </AnimatePresence>
               </div>
+            ) : item.isRoute ? (
+              <button
+                key={item.label}
+                onClick={() => navigate(item.href)}
+                className="font-body text-sm text-muted-foreground transition-colors hover:text-primary"
+              >
+                {item.label}
+              </button>
             ) : (
               <a
                 key={item.label}
@@ -174,6 +183,14 @@ const Navbar = () => {
                       )}
                     </AnimatePresence>
                   </div>
+                ) : item.isRoute ? (
+                  <button
+                    key={item.label}
+                    onClick={() => { navigate(item.href); setIsOpen(false); }}
+                    className="font-body text-base text-muted-foreground transition-colors hover:text-primary text-left"
+                  >
+                    {item.label}
+                  </button>
                 ) : (
                   <a
                     key={item.label}

@@ -8,6 +8,7 @@ import CaseStudyUniversalCart from "./pages/CaseStudyUniversalCart";
 import CaseStudyDeviceSetup from "./pages/CaseStudyDeviceSetup";
 import CaseStudyBcspServices from "./pages/CaseStudyBcspServices";
 import CaseStudyPocRfp from "./pages/CaseStudyPocRfp";
+import Story from "./pages/Story";
 import NotFound from "./pages/NotFound";
 import { ScrollToTop } from "./components/ScrollToTop";
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/case-study/device-setup" element={<CaseStudyDeviceSetup />} />
           <Route path="/case-study/bcsp-services" element={<CaseStudyBcspServices />} />
           <Route path="/case-study/poc-rfp" element={<CaseStudyPocRfp />} />
+          <Route path="/story" element={<Story />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
