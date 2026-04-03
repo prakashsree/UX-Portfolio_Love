@@ -104,6 +104,14 @@ const Navbar = () => {
                   )}
                 </AnimatePresence>
               </div>
+            ) : item.isRoute ? (
+              <button
+                key={item.label}
+                onClick={() => navigate(item.href)}
+                className="font-body text-sm text-muted-foreground transition-colors hover:text-primary"
+              >
+                {item.label}
+              </button>
             ) : (
               <a
                 key={item.label}
