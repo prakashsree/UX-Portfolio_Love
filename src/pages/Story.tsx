@@ -238,28 +238,20 @@ const slides = [
           transition={{ delay: 0.2 }}
           className="font-body text-lg text-muted-foreground md:text-xl leading-relaxed"
         >
-          I built <strong className="text-foreground">design systems</strong> from scratch.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="mt-4 font-body text-lg text-muted-foreground md:text-xl leading-relaxed"
-        >
           Simplified <strong className="text-foreground">complex workflows</strong>.
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.4 }}
-          className="mt-4 font-body text-lg text-muted-foreground md:text-xl leading-relaxed"
+          transition={{ delay: 0.8 }}
+          className="mt-6 font-body text-lg text-muted-foreground md:text-xl leading-relaxed"
         >
           Partnered with everyone from <strong className="text-foreground">C-suite stakeholders</strong> to <strong className="text-foreground">frontline users</strong>.
         </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.2 }}
+          transition={{ delay: 1.4 }}
           className="mt-12 border-l-2 border-primary/30 pl-6 text-left"
         >
           <p className="font-body text-base text-muted-foreground italic leading-relaxed">
@@ -269,8 +261,8 @@ const slides = [
         <motion.p
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 2.8 }}
-          className="mt-6 font-display text-sm tracking-widest text-primary/60"
+          transition={{ delay: 2.0 }}
+          className="mt-8 font-display text-sm tracking-widest text-primary/60"
         >
           I didn't just design screens. I shaped experiences.
         </motion.p>
