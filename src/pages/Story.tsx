@@ -1,453 +1,106 @@
-import { useState, useCallback, useEffect } from "react";
+import { useState, useCallback, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ArrowLeft, ArrowRight, Home } from "lucide-react";
+import { Home } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import ThemeToggle from "@/components/ThemeToggle";
+import { slides } from "@/components/story/StorySlides";
+import StoryControls from "@/components/story/StoryControls";
+import StoryProgress from "@/components/story/StoryProgress";
+import StoryDecorations from "@/components/story/StoryDecorations";
+import StoryEndScreen from "@/components/story/StoryEndScreen";
 
-const slides = [
-  {
-    id: 1,
-    label: "THE BEGINNING",
-    content: (
-      <div className="flex h-full flex-col items-center justify-center text-center px-8">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="font-body text-lg text-muted-foreground md:text-xl max-w-2xl"
-        >
-          Engineering gave me logic. But it was the people using technology who fascinated me more than the technology itself. Why do some tools clicks instantly, while others frustrate you into giving up?
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="mt-4 font-body text-lg text-muted-foreground md:text-xl max-w-2xl"
-        >
-          Learning how systems are built.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.0 }}
-          className="mt-4 font-body text-lg text-muted-foreground md:text-xl max-w-2xl"
-        >
-          How they <strong className="text-foreground">scale</strong>. How they <strong className="text-foreground">hold</strong>.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.6 }}
-          className="mt-8 font-body text-lg text-muted-foreground md:text-xl max-w-2xl"
-        >
-          But somewhere along the way,
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.0 }}
-          className="mt-4 font-body text-lg text-muted-foreground md:text-xl max-w-2xl"
-        >
-          I started asking <strong className="text-foreground">different questions</strong>.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 2.6 }}
-          className="mt-12 flex items-center gap-4"
-        >
-          <span className="font-display text-sm text-muted-foreground tracking-widest">How does it work?</span>
-          <span className="text-primary text-2xl">→</span>
-          <span className="font-display text-sm text-primary tracking-widest font-semibold">How does it feel?</span>
-        </motion.div>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 3.2 }}
-          className="mt-6 font-display text-sm tracking-widest text-primary/60"
-        >
-          That question changed everything.
-        </motion.p>
-      </div>
-    ),
-  },
-  {
-    id: 2,
-    label: "TWO WORLDS",
-    content: (
-      <div className="flex h-full flex-col items-center justify-center text-center px-8">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="font-display text-4xl font-bold text-foreground md:text-5xl"
-        >
-          12+ years
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="mt-2 font-body text-lg text-muted-foreground"
-        >
-          across <strong className="text-foreground">two worlds</strong>
-        </motion.p>
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 max-w-3xl w-full">
-          <motion.div
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1.0 }}
-            className="rounded-2xl border border-border bg-card p-8 text-left"
-          >
-            <h3 className="font-display text-xl font-bold text-foreground">Enterprise</h3>
-            <p className="mt-3 font-body text-sm text-muted-foreground leading-relaxed">
-              taught me <strong className="text-foreground">scale</strong>. Process.<br />
-              Collaboration across teams.
-            </p>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1.4 }}
-            className="rounded-2xl border border-border bg-card p-8 text-left"
-          >
-            <h3 className="font-display text-xl font-bold text-foreground">Consulting</h3>
-            <p className="mt-3 font-body text-sm text-muted-foreground leading-relaxed">
-              taught me <strong className="text-foreground">strategy</strong>. Ownership.<br />
-              Decisions that shaped products.
-            </p>
-          </motion.div>
-        </div>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2.0 }}
-          className="mt-10 flex items-center gap-4 font-display text-xs tracking-[0.2em] text-muted-foreground"
-        >
-          <span>STRUCTURE</span>
-          <span className="text-primary">✦</span>
-          <span>OWNERSHIP</span>
-        </motion.div>
-      </div>
-    ),
-  },
-  {
-    id: 3,
-    label: "DOMAINS",
-    content: (
-      <div className="flex h-full flex-col items-center justify-center text-center px-8">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="font-body text-lg text-muted-foreground md:text-xl max-w-2xl"
-        >
-          I've worked across
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.6 }}
-          className="mt-6 flex flex-wrap justify-center gap-3"
-        >
-          {["Communications", "Media", "Technology", "Retail", "Hospitality"].map((domain, i) => (
-            <motion.span
-              key={domain}
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 0.8 + i * 0.2 }}
-              className="rounded-full border border-primary/30 bg-primary/5 px-5 py-2 font-display text-sm font-medium text-foreground"
-            >
-              {domain}
-            </motion.span>
-          ))}
-        </motion.div>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.0 }}
-          className="mt-8 font-body text-lg text-muted-foreground max-w-xl"
-        >
-          Designing products people rely on every day.<br /><br />Each domain taught me something the last one couldn't. Complex enterprise systems. Consumer apps. Government education platforms. Different problems, same methodology.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2.6 }}
-          className="mt-6 font-display text-base font-semibold tracking-wide text-primary"
-        >
-          Outcomes over outputs.
-        </motion.p>
-      </div>
-    ),
-  },
-  {
-    id: 4,
-    label: "IMPACT",
-    content: (
-      <div className="flex h-full flex-col items-center justify-center text-center px-8">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="font-body text-base text-muted-foreground mb-10"
-        >
-          And I've always believed in one thing:
-        </motion.p>
-        <div className="grid grid-cols-2 gap-6 md:grid-cols-4 max-w-4xl w-full">
-          {[
-            { value: "12+", label: "Years of Experience" },
-            { value: "5+", label: "Industry Domains" },
-            { value: "20+", label: "Projects Delivered" },
-            { value: "C-Suite", label: "Stakeholder Partnerships" },
-          ].map((stat, i) => (
-            <motion.div
-              key={stat.label}
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 + i * 0.3 }}
-              className="rounded-2xl border border-border bg-card p-6"
-            >
-              <div className="font-display text-3xl font-bold text-primary md:text-4xl">{stat.value}</div>
-              <div className="mt-2 font-body text-xs text-muted-foreground">{stat.label}</div>
-            </motion.div>
-          ))}
-        </div>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2.2 }}
-          className="mt-8 font-display text-sm tracking-widest text-primary/60"
-        >
-          Not just shipped. Improved.<br /><br />
-          I don't just hand off designs.<br />
-          I see them through —<br />
-          from research to release.
-        </motion.p>
-      </div>
-    ),
-  },
-  {
-    id: 5,
-    label: "CRAFT",
-    content: (
-      <div className="flex h-full flex-col items-center justify-center text-center px-8 max-w-2xl mx-auto">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="font-body text-lg text-muted-foreground md:text-xl leading-relaxed"
-        >
-          Simplified <strong className="text-foreground">complex workflows</strong>.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="mt-6 font-body text-lg text-muted-foreground md:text-xl leading-relaxed"
-        >
-          Partnered with everyone from <strong className="text-foreground">C-suite stakeholders</strong> to <strong className="text-foreground">frontline users</strong>.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.4 }}
-          className="mt-12 border-l-2 border-primary/30 pl-6 text-left"
-        >
-          <p className="font-body text-base text-muted-foreground italic leading-relaxed">
-            "Great design sits at the intersection of <strong className="text-foreground not-italic">empathy</strong> and <strong className="text-foreground not-italic">strategy</strong>."
-          </p>
-        </motion.div>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2.0 }}
-          className="mt-8 font-display text-sm tracking-widest text-primary/60"
-        >
-          I didn't just design screens. I shaped experiences.
-        </motion.p>
-      </div>
-    ),
-  },
-  {
-    id: 6,
-    label: "EVOLUTION",
-    content: (
-      <div className="flex h-full flex-col items-center justify-center text-center px-8 max-w-2xl mx-auto">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="font-body text-lg text-muted-foreground md:text-xl"
-        >
-          And now, I'm evolving again.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="mt-4 font-body text-lg text-muted-foreground md:text-xl leading-relaxed"
-        >
-          Blending <strong className="text-foreground">deep user research</strong> with <strong className="text-foreground">analytical thinking</strong>
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.4 }}
-          className="mt-4 font-body text-lg text-muted-foreground md:text-xl leading-relaxed"
-        >
-          to deliver interfaces that are not just beautiful,
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.0 }}
-          className="mt-2 font-display text-2xl font-bold text-primary md:text-3xl"
-        >
-          but measurably effective.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2.8 }}
-          className="mt-12 flex flex-col items-center gap-4"
-        >
-          <p className="font-display text-xs tracking-[0.2em] text-muted-foreground">
-            MBA in Marketing & IT · B.Tech in IT
-          </p>
-          <p className="font-body text-sm text-muted-foreground">
-            When I'm not designing, I'm exploring a new domain problem or mentoring junior designers.
-          </p>
-        </motion.div>
-      </div>
-    ),
-  },
-  {
-    id: 7,
-    label: "NOW",
-    content: (
-      <div className="flex h-full flex-col items-center justify-center text-center px-8 max-w-2xl mx-auto">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="font-body text-lg text-muted-foreground md:text-xl leading-relaxed"
-        >
-          Still curious.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="mt-4 font-body text-lg text-muted-foreground md:text-xl leading-relaxed"
-        >
-          Still designing.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.4 }}
-          className="mt-4 font-body text-lg text-muted-foreground md:text-xl leading-relaxed"
-        >
-          Still asking <strong className="text-foreground">why</strong>.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.0 }}
-          className="mt-10 font-display text-sm tracking-widest text-primary/60"
-        >
-          Based in Bengaluru, available globally.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.6 }}
-          className="mt-6 font-body text-base text-muted-foreground leading-relaxed"
-        >
-          If you have a complex problem that needs both <strong className="text-foreground">design thinking</strong> and <strong className="text-foreground">business sense</strong> — I'd genuinely love to hear about it.
-        </motion.p>
-      </div>
-    ),
-  },
-  {
-    id: 8,
-    label: "CLOSING",
-    content: (
-      <div className="flex h-full flex-col items-center justify-center text-center px-8 max-w-2xl mx-auto">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.2 }}
-          className="font-body text-base text-muted-foreground md:text-lg leading-relaxed"
-        >
-          Engineering taught me systems. Design taught me empathy. AI is teaching me orchestration.
-        </motion.p>
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8 }}
-          className="mt-8 text-primary/40 text-lg tracking-[0.3em]"
-        >
-          ✿❀✿
-        </motion.div>
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.2 }}
-          className="mt-8 font-display text-3xl font-bold text-foreground md:text-4xl"
-        >
-          Prakash S
-        </motion.h2>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 1.6 }}
-          className="mt-2 font-display text-sm tracking-widest text-primary"
-        >
-          Lead UX Designer
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2.0 }}
-          className="mt-6 font-display text-xs tracking-[0.2em] text-muted-foreground"
-        >
-          Engineer ✿ Designer ✿ AI-native
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2.4 }}
-          className="mt-4 font-body text-sm text-muted-foreground"
-        >
-          ✿ Bengaluru, India
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2.8 }}
-          className="mt-8 font-display text-lg font-semibold text-primary tracking-wide"
-        >
-          Let's build what's next.
-        </motion.p>
-      </div>
-    ),
-  },
-];
+const formatTime = (seconds: number) => {
+  const m = Math.floor(seconds / 60);
+  const s = Math.floor(seconds % 60);
+  return `${m}:${s.toString().padStart(2, "0")}`;
+};
+
+const totalDuration = slides.reduce((sum, s) => sum + s.duration, 0);
 
 const Story = () => {
   const [current, setCurrent] = useState(0);
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [slideElapsed, setSlideElapsed] = useState(0);
+  const [showEnd, setShowEnd] = useState(false);
   const navigate = useNavigate();
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const currentSlide = slides[current];
+  const slideDuration = currentSlide.duration;
+
+  // Compute elapsed time
+  const elapsedBefore = slides.slice(0, current).reduce((sum, s) => sum + s.duration, 0);
+  const totalElapsed = elapsedBefore + slideElapsed;
+
+  // Autoplay timer
+  useEffect(() => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+
+    if (isPlaying && !showEnd) {
+      const tick = 100; // ms
+      intervalRef.current = setInterval(() => {
+        setSlideElapsed((prev) => {
+          const next = prev + tick / 1000;
+          if (next >= slideDuration) {
+            if (current < slides.length - 1) {
+              setCurrent((c) => c + 1);
+              return 0;
+            } else {
+              setIsPlaying(false);
+              setShowEnd(true);
+              return slideDuration;
+            }
+          }
+          return next;
+        });
+      }, tick);
+    }
+
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [isPlaying, current, slideDuration, showEnd]);
 
   const goNext = useCallback(() => {
-    setCurrent((c) => Math.min(c + 1, slides.length - 1));
-  }, []);
+    if (current < slides.length - 1) {
+      setCurrent((c) => c + 1);
+      setSlideElapsed(0);
+    }
+  }, [current]);
 
   const goPrev = useCallback(() => {
-    setCurrent((c) => Math.max(c - 1, 0));
+    if (current > 0) {
+      setCurrent((c) => c - 1);
+      setSlideElapsed(0);
+    }
+  }, [current]);
+
+  const handlePlayPause = useCallback(() => {
+    if (showEnd) {
+      setShowEnd(false);
+      setCurrent(0);
+      setSlideElapsed(0);
+      setIsPlaying(true);
+    } else {
+      setIsPlaying((p) => !p);
+    }
+  }, [showEnd]);
+
+  const handleReset = useCallback(() => {
+    setCurrent(0);
+    setSlideElapsed(0);
+    setIsPlaying(true);
+    setShowEnd(false);
   }, []);
 
+  const handleDotClick = useCallback((i: number) => {
+    setCurrent(i);
+    setSlideElapsed(0);
+    setShowEnd(false);
+    setIsPlaying(true);
+  }, []);
+
+  // Keyboard controls
   useEffect(() => {
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === "ArrowRight" || e.key === " ") {
@@ -458,16 +111,32 @@ const Story = () => {
         goPrev();
       } else if (e.key === "Escape") {
         navigate("/");
+      } else if (e.key === "p" || e.key === "P") {
+        handlePlayPause();
       }
     };
     window.addEventListener("keydown", handleKey);
     return () => window.removeEventListener("keydown", handleKey);
-  }, [goNext, goPrev, navigate]);
+  }, [goNext, goPrev, navigate, handlePlayPause]);
 
   return (
     <div className="fixed inset-0 bg-background flex flex-col overflow-hidden">
+      {/* Decorations layer */}
+      <StoryDecorations />
+
+      {/* Progress bar at very top */}
+      <div className="px-6 pt-3 z-10">
+        <StoryProgress
+          current={current}
+          total={slides.length}
+          slideProgress={slideElapsed / slideDuration}
+          elapsedTime={formatTime(totalElapsed)}
+          totalTime={formatTime(totalDuration)}
+        />
+      </div>
+
       {/* Top bar */}
-      <div className="flex items-center justify-between px-6 py-4 z-10">
+      <div className="flex items-center justify-between px-6 py-2 z-10">
         <button
           onClick={() => navigate("/")}
           className="flex items-center gap-2 font-body text-sm text-muted-foreground transition-colors hover:text-primary"
@@ -478,21 +147,31 @@ const Story = () => {
 
         {/* Dot indicators */}
         <div className="flex items-center gap-2">
-          {slides.map((_, i) => (
+          {slides.map((s, i) => (
             <button
               key={i}
-              onClick={() => setCurrent(i)}
-              className={`h-2 w-2 rounded-full transition-all duration-300 ${
-                i === current
-                  ? "bg-primary w-6"
-                  : "bg-muted-foreground/30 hover:bg-muted-foreground/50"
-              }`}
-            />
+              onClick={() => handleDotClick(i)}
+              className="group relative flex items-center"
+            >
+              <div
+                className={`h-2 rounded-full transition-all duration-500 ${
+                  i === current
+                    ? "bg-primary w-8"
+                    : i < current
+                    ? "bg-primary/40 w-2"
+                    : "bg-muted-foreground/20 w-2 hover:bg-muted-foreground/40"
+                }`}
+              />
+              {/* Tooltip on hover */}
+              <span className="absolute -bottom-6 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity font-display text-[9px] tracking-widest text-muted-foreground whitespace-nowrap">
+                {s.label}
+              </span>
+            </button>
           ))}
         </div>
 
         <div className="flex items-center gap-3">
-          <span className="font-display text-xs tracking-widest text-muted-foreground">
+          <span className="font-display text-xs tracking-widest text-muted-foreground hidden sm:inline">
             {slides[current].label} · {current + 1}/{slides.length}
           </span>
           <ThemeToggle />
@@ -507,59 +186,56 @@ const Story = () => {
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -60 }}
-            transition={{ duration: 0.4, ease: "easeInOut" }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             className="absolute inset-0 flex items-center justify-center"
           >
             {slides[current].content}
           </motion.div>
         </AnimatePresence>
+
+        {/* End screen overlay */}
+        {showEnd && <StoryEndScreen onReplay={handleReset} />}
       </div>
 
-      {/* Bottom nav */}
-      <div className="flex items-center justify-center gap-4 px-6 py-6 z-10">
-        <button
-          onClick={goPrev}
-          disabled={current === 0}
-          className="flex h-10 w-10 items-center justify-center rounded-full border border-border text-foreground transition-colors hover:bg-accent disabled:opacity-30 disabled:cursor-not-allowed"
-        >
-          <ArrowLeft className="h-4 w-4" />
-        </button>
+      {/* Bottom controls */}
+      <div className="flex items-center justify-between px-6 py-4 z-10">
+        {/* Left: links */}
+        <div className="flex items-center gap-4">
+          <button
+            onClick={() => navigate("/")}
+            className="font-display text-[10px] tracking-widest text-muted-foreground hover:text-primary transition-colors hidden sm:inline"
+          >
+            ↗ CASE STUDIES
+          </button>
+          <a
+            href="https://drive.google.com/file/d/1n58wH_qmFwxfxLoMcdD5zfwAm07T-4Us/view?usp=drive_link"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-display text-[10px] tracking-widest text-muted-foreground hover:text-primary transition-colors hidden sm:inline"
+          >
+            ↓ DOWNLOAD RESUME
+          </a>
+        </div>
+
+        {/* Center: playback controls */}
+        <StoryControls
+          isPlaying={isPlaying}
+          onPlayPause={handlePlayPause}
+          onPrev={goPrev}
+          onNext={goNext}
+          onReset={handleReset}
+          canPrev={current > 0}
+          canNext={current < slides.length - 1}
+        />
+
+        {/* Right: CTA */}
         <button
           onClick={current === slides.length - 1 ? () => navigate("/") : goNext}
           className="flex h-10 items-center gap-2 rounded-full bg-primary px-6 font-body text-sm font-medium text-primary-foreground transition-shadow hover:shadow-glow"
         >
-          {current === slides.length - 1 ? (
-            "View My Work →"
-          ) : (
-            <>
-              Next <ArrowRight className="h-4 w-4" />
-            </>
-          )}
+          {current === slides.length - 1 ? "VIEW MY WORK →" : "Next →"}
         </button>
       </div>
-
-      {/* Decorative floating elements */}
-      <motion.div
-        animate={{ y: [0, -15, 0], rotate: [0, 5, 0] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-20 right-20 text-2xl text-primary/10 pointer-events-none hidden md:block"
-      >
-        ✦
-      </motion.div>
-      <motion.div
-        animate={{ y: [0, 10, 0], rotate: [0, -5, 0] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-        className="absolute bottom-32 left-16 text-3xl text-primary/10 pointer-events-none hidden md:block"
-      >
-        ✧
-      </motion.div>
-      <motion.div
-        animate={{ y: [0, -8, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
-        className="absolute top-40 left-32 text-xl text-primary/5 pointer-events-none hidden lg:block"
-      >
-        ◆
-      </motion.div>
     </div>
   );
 };
