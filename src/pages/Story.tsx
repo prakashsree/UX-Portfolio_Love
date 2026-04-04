@@ -322,6 +322,54 @@ const slides = [
       </div>
     ),
   },
+  {
+    id: 7,
+    label: "NOW",
+    content: (
+      <div className="flex h-full flex-col items-center justify-center text-center px-8 max-w-2xl mx-auto">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="font-body text-lg text-muted-foreground md:text-xl leading-relaxed"
+        >
+          Still curious.
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.8 }}
+          className="mt-4 font-body text-lg text-muted-foreground md:text-xl leading-relaxed"
+        >
+          Still designing.
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.4 }}
+          className="mt-4 font-body text-lg text-muted-foreground md:text-xl leading-relaxed"
+        >
+          Still asking <strong className="text-foreground">why</strong>.
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 2.0 }}
+          className="mt-10 font-display text-sm tracking-widest text-primary/60"
+        >
+          Based in Bengaluru, available globally.
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 2.6 }}
+          className="mt-6 font-body text-base text-muted-foreground leading-relaxed"
+        >
+          If you have a complex problem that needs both <strong className="text-foreground">design thinking</strong> and <strong className="text-foreground">business sense</strong> — I'd genuinely love to hear about it.
+        </motion.p>
+      </div>
+    ),
+  },
 ];
 
 const Story = () => {
