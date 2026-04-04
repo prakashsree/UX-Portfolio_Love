@@ -219,7 +219,10 @@ const slides = [
           transition={{ delay: 2.2 }}
           className="mt-8 font-display text-sm tracking-widest text-primary/60"
         >
-          Not just shipped. Improved.
+          Not just shipped. Improved.<br /><br />
+          I don't just hand off designs.<br />
+          I see them through —<br />
+          from research to release.
         </motion.p>
       </div>
     ),
