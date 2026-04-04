@@ -370,6 +370,70 @@ const slides = [
       </div>
     ),
   },
+  {
+    id: 8,
+    label: "CLOSING",
+    content: (
+      <div className="flex h-full flex-col items-center justify-center text-center px-8 max-w-2xl mx-auto">
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2 }}
+          className="font-body text-base text-muted-foreground md:text-lg leading-relaxed"
+        >
+          Engineering taught me systems. Design taught me empathy. AI is teaching me orchestration.
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.8 }}
+          className="mt-8 text-primary/40 text-lg tracking-[0.3em]"
+        >
+          ✿❀✿
+        </motion.div>
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.2 }}
+          className="mt-8 font-display text-3xl font-bold text-foreground md:text-4xl"
+        >
+          Prakash S
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.6 }}
+          className="mt-2 font-display text-sm tracking-widest text-primary"
+        >
+          Lead UX Designer
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2.0 }}
+          className="mt-6 font-display text-xs tracking-[0.2em] text-muted-foreground"
+        >
+          Engineer ✿ Designer ✿ AI-native
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 2.4 }}
+          className="mt-4 font-body text-sm text-muted-foreground"
+        >
+          ✿ Bengaluru, India
+        </motion.p>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 2.8 }}
+          className="mt-8 font-display text-lg font-semibold text-primary tracking-wide"
+        >
+          Let's build what's next.
+        </motion.p>
+      </div>
+    ),
+  },
 ];
 
 const Story = () => {
