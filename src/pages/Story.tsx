@@ -168,7 +168,7 @@ const slides = [
           transition={{ delay: 2.0 }}
           className="mt-8 font-body text-lg text-muted-foreground max-w-xl"
         >
-          designing products people rely on every day.
+          designing products people rely on every day. Each domain taught me something the last one couldn't. Complex enterprise systems. Consumer apps. Government education platforms. Different problems, same methodology.
         </motion.p>
         <motion.p
           initial={{ opacity: 0 }}
