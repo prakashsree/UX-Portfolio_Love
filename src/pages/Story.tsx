@@ -16,7 +16,7 @@ const slides = [
           transition={{ delay: 0.2 }}
           className="font-body text-lg text-muted-foreground md:text-xl max-w-2xl"
         >
-          I began in technology.
+          Engineering gave me logic. But it was the people using technology who fascinated me more than the technology itself. Why do some tools clicks instantly, while others frustrate you into giving up?
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
