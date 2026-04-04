@@ -238,14 +238,6 @@ const slides = [
           transition={{ delay: 0.2 }}
           className="font-body text-lg text-muted-foreground md:text-xl leading-relaxed"
         >
-          I built <strong className="text-foreground">design systems</strong> from scratch.
-        </motion.p>
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="mt-4 font-body text-lg text-muted-foreground md:text-xl leading-relaxed"
-        >
           Simplified <strong className="text-foreground">complex workflows</strong>.
         </motion.p>
         <motion.p
