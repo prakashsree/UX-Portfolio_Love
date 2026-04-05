@@ -23,6 +23,7 @@ const App = () => (
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/home" element={<Index />} />
           <Route path="/case-study/universal-cart" element={<CaseStudyUniversalCart />} />
           <Route path="/case-study/device-setup" element={<CaseStudyDeviceSetup />} />
           <Route path="/case-study/bcsp-services" element={<CaseStudyBcspServices />} />
