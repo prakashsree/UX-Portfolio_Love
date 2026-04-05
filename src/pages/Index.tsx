@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import ClientsSection from "@/components/ClientsSection";
@@ -12,10 +12,13 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
-    navigate("/story", { replace: true });
-  }, [navigate]);
+    if (location.pathname === "/") {
+      navigate("/story", { replace: true });
+    }
+  }, [navigate, location.pathname]);
 
   return (
     <>
