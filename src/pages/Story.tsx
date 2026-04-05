@@ -47,7 +47,8 @@ const Story = () => {
               return 0;
             } else {
               setIsPlaying(false);
-              setShowEnd(true);
+              // Navigate to home after a brief pause
+              setTimeout(() => navigate("/home"), 1500);
               return slideDuration;
             }
           }
