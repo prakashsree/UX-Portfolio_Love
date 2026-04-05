@@ -111,7 +111,7 @@ const Story = () => {
         e.preventDefault();
         goPrev();
       } else if (e.key === "Escape") {
-        navigate("/");
+        navigate("/home");
       } else if (e.key === "p" || e.key === "P") {
         handlePlayPause();
       }
@@ -139,7 +139,7 @@ const Story = () => {
       {/* Top bar */}
       <div className="flex items-center justify-between px-6 py-2 z-10">
         <button
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/home")}
           className="flex items-center gap-2 font-body text-sm text-muted-foreground transition-colors hover:text-primary"
         >
           <Home className="h-4 w-4" />
@@ -203,7 +203,7 @@ const Story = () => {
         {/* Left: links */}
         <div className="flex items-center gap-4">
           <button
-            onClick={() => navigate("/")}
+            onClick={() => navigate("/home")}
             className="font-display text-[10px] tracking-widest text-muted-foreground hover:text-primary transition-colors hidden sm:inline"
           >
             ↗ CASE STUDIES
@@ -231,7 +231,7 @@ const Story = () => {
 
         {/* Right: CTA */}
         <button
-          onClick={current === slides.length - 1 ? () => navigate("/") : goNext}
+          onClick={current === slides.length - 1 ? () => navigate("/home") : goNext}
           className="flex h-10 items-center gap-2 rounded-full bg-primary px-6 font-body text-sm font-medium text-primary-foreground transition-shadow hover:shadow-glow"
         >
           {current === slides.length - 1 ? "VIEW MY WORK →" : "Next →"}
