@@ -27,7 +27,7 @@ export const slides: SlideData[] = [
     content: (
       <div className="flex h-full flex-col items-center justify-center text-center px-8">
         <motion.p {...fadeUp(0.2)} className="font-body text-lg text-muted-foreground md:text-xl max-w-2xl">
-          Engineering gave me logic. But it was the people using technology who fascinated me more than the technology itself. Why do some tools clicks instantly, while others frustrate you into giving up?
+          I began in Engineering. But it was the people using technology who fascinated me more than the technology itself. Why do some tools clicks instantly, while others frustrate you into giving up?
         </motion.p>
         <motion.p {...fadeUp(0.6)} className="mt-4 font-body text-lg text-muted-foreground md:text-xl max-w-2xl">
           Learning how systems are built.
