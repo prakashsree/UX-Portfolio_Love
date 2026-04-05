@@ -41,7 +41,7 @@ const Navbar = () => {
     if (external) return;
     e.preventDefault();
     if (location.pathname !== "/") {
-      navigate("/");
+      navigate("/home");
       setTimeout(() => {
         document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
       }, 300);
