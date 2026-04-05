@@ -43,7 +43,7 @@ const StoryEndScreen = ({ onReplay }: StoryEndScreenProps) => {
         className="mt-10 flex flex-col sm:flex-row items-center gap-4"
       >
         <button
-          onClick={() => navigate("/")}
+          onClick={() => navigate("/home")}
           className="flex h-11 items-center gap-2 rounded-full bg-primary px-8 font-body text-sm font-medium text-primary-foreground transition-shadow hover:shadow-glow"
         >
           View Portfolio →
