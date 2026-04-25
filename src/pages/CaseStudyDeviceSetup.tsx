@@ -21,7 +21,7 @@ const DeviceSetupCaseStudy = () => {
         <section className="bg-card py-16">
           <div className="container mx-auto px-6">
             <Link
-              to="/"
+              to="/home"
               className="mb-8 inline-flex items-center gap-2 font-body text-sm text-muted-foreground transition-colors hover:text-primary">
               
               <ArrowLeft className="h-4 w-4" /> Back to Home
