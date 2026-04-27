@@ -116,7 +116,7 @@ const CaseStudyPocRfp = () => {
                 Demonstration in principle with the aim of verifying that some concept or theory has practical potential.
               </p>
               <div className="flex flex-wrap gap-6 font-body text-sm text-muted-foreground">
-                <div><span className="font-semibold text-foreground">Role:</span> UX Designer</div>
+                <div><span className="font-semibold text-foreground">Role:</span> Lead UX Designer</div>
                 <div><span className="font-semibold text-foreground">Type:</span> Proof of Concept</div>
                 <div><span className="font-semibold text-foreground">Methods:</span> Wireframing, Prototyping, UX Strategy</div>
               </div>
