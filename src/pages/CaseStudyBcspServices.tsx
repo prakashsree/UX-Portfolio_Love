@@ -39,7 +39,7 @@ const CaseStudyBcspServices = () => {
                 Discover the service offerings within BCSP and provide feedback to improve their user experience.
               </p>
               <div className="flex flex-wrap gap-6 font-body text-sm text-muted-foreground">
-                <div><span className="font-semibold text-foreground">Role:</span> Lead UX Designer</div>
+                <div><span className="font-semibold text-foreground">Role:</span> UX Designer</div>
                 <div><span className="font-semibold text-foreground">Type:</span> Individual Contributor</div>
                 <div><span className="font-semibold text-foreground">Methods:</span> User Research, Surveys, Heuristic Evaluation, Prototyping</div>
               </div>
