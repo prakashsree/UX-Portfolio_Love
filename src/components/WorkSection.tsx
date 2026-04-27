@@ -13,7 +13,7 @@ const projects = [
   subtitle: "Communications & Technology",
   description:
   "Redesigned the cross-channel cart and quote system for a global telecom leader, reducing cart abandonment and enabling seamless quote-to-cart conversion across devices and channels.",
-  role: "Sr UX Designer",
+  role: "Lead UX Designer",
   tags: ["Research", "Design Thinking", "Prototyping", "Usability Testing"],
   image: cartImg,
   link: "/case-study/universal-cart"
@@ -24,7 +24,7 @@ const projects = [
   subtitle: "Communications & Technology",
   description:
   "Created a unified, easy-to-follow device setup experience that centralizes all setup assets and increases adoption of tech support offerings.",
-  role: "Lead Designer",
+  role: "Lead UX Designer",
   tags: ["UX Design", "Information Architecture", "User Flows"],
   image: deviceImg,
   link: "/case-study/device-setup"
@@ -35,7 +35,7 @@ const projects = [
   subtitle: "Communications & Technology",
   description:
   "Discovered service offerings within BCSP and provided UX feedback through surveys, heuristic evaluations, and chatbot design to improve user experience.",
-  role: "UX Designer",
+  role: "Lead UX Designer",
   tags: ["User Research", "Surveys", "Heuristic Evaluation", "Chatbots"],
   image: bcspImg,
   link: "/case-study/bcsp-services"
@@ -46,7 +46,7 @@ const projects = [
   subtitle: "Multi-Industry",
   description:
   "Design proposals for a Restaurant iOS app, Telecom dashboard, and Vehicle service contracts — verifying concepts with wireframes and UX strategy.",
-  role: "UX Designer",
+  role: "Lead UX Designer",
   tags: ["Wireframing", "Prototyping", "UX Strategy", "POC"],
   image: pocImg,
   link: "/case-study/poc-rfp"
