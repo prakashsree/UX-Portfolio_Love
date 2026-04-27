@@ -40,7 +40,7 @@ const DeviceSetupCaseStudy = () => {
                 Building a "One Place To Go" (OPTG) experience for device setup, activation, and content transfer — reducing support calls and increasing adoption of Tech Coach offerings.
               </p>
               <div className="flex flex-wrap gap-6 font-body text-sm text-muted-foreground">
-                <div><span className="font-semibold text-foreground">Role:</span> Sr UX Designer</div>
+                <div><span className="font-semibold text-foreground">Role:</span> Lead UX Designer</div>
                 <div><span className="font-semibold text-foreground">Type:</span> Individual Contributor</div>
                 <div><span className="font-semibold text-foreground">Task:</span> Research, Design Thinking, Low/Hi-Fidelity Prototypes</div>
               </div>
