@@ -15,7 +15,7 @@ const ContactSection = () => {
             Let's Build Something Great
           </h2>
           <p className="mb-10 font-body text-lg text-muted-foreground">
-            Whether you're hiring for a lead UX role, need a consultant for a complex product challenge, or just want to chat about design — I'd love to hear from you.
+            Whether you're hiring for the Sr UX role, need a consultant for a complex product challenge, or just want to chat about design — I'd love to hear from you.
           </p>
 
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
