@@ -209,7 +209,7 @@ const Story = () => {
             ↗ CASE STUDIES
           </button>
           <a
-            href="https://drive.google.com/file/d/1n58wH_qmFwxfxLoMcdD5zfwAm07T-4Us/view?usp=drive_link"
+            href="https://drive.google.com/file/d/1SnoWyYKy1aUx8ZEac84k6lxhLK9E_gJk/view?usp=drive_link"
             target="_blank"
             rel="noopener noreferrer"
             className="font-display text-[10px] tracking-widest text-muted-foreground hover:text-primary transition-colors hidden sm:inline"
