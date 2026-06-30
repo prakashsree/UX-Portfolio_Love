@@ -15,7 +15,7 @@ const navItems = [
   { label: "Work", href: "#work", hasDropdown: true },
   { label: "About", href: "#about" },
   { label: "Story", href: "/story", isRoute: true },
-  { label: "Resume", href: "https://drive.google.com/file/d/1n58wH_qmFwxfxLoMcdD5zfwAm07T-4Us/view?usp=drive_link", external: true },
+  { label: "Resume", href: "https://drive.google.com/file/d/1SnoWyYKy1aUx8ZEac84k6lxhLK9E_gJk/view?usp=drive_link", external: true },
 ];
 
 const Navbar = () => {
